@@ -1,0 +1,25 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('guiasturists', function (Blueprint $table) {
+            $table->id('idguiatur');
+            $table->string('nomguiatur', 80);
+            $table->string('nomresguiatur', 80);
+            $table->string('telguiatur', 10);
+            $table->string('corguiatur', 50);
+            $table->string('imgguiatur', 100);
+            $table->timestamps();
+        });
+    }
+    public function down(): void
+    {
+        Schema::dropIfExists('guiasturists');
+    }
+};
