@@ -23,6 +23,7 @@
         "jquery": "^3.7.1",
         "select2": "^4.1.0-rc.0",
         "vue-chartjs": "^5.3.2",
-        "vue3-select2-component": "^0.1.7"
+        "vue3-select2-component": "^0.1.7",
+        "ziggy-js": "^2.6.2"
     }
 }
