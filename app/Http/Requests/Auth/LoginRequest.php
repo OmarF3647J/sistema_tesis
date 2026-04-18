@@ -27,7 +27,7 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'string', 'email'],
+            'name' => ['required', 'string', 'name'],
             'password' => ['required', 'string'],
         ];
     }
@@ -41,12 +41,12 @@ class LoginRequest extends FormRequest
     {
         $this->ensureIsNotRateLimited();
 
-        if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        if (! Auth::attempt($this->only('name', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey(),300);
 
             throw ValidationException::withMessages([
-                'email' => "Estas credenciales no coinciden con nuestros registros.",
-                // 'email' => trans('auth.failed'),
+                'name' => "Estas credenciales no coinciden con nuestros registros.",
+                // 'name' => trans('auth.failed'),
             ]);
         }
 
@@ -69,7 +69,7 @@ class LoginRequest extends FormRequest
         $seconds = RateLimiter::availableIn($this->throttleKey());
 
         throw ValidationException::withMessages([
-            'email' => "Has excedido el número de intentos. Intenta de nuevo en {$seconds} segundos (".ceil($seconds/60)." minutos).", [
+            'name' => "Has excedido el número de intentos. Intenta de nuevo en {$seconds} segundos (".ceil($seconds/60)." minutos).", [
                 'seconds' => $seconds,
                 'minutes' => ceil($seconds / 60),
             ],
@@ -81,6 +81,6 @@ class LoginRequest extends FormRequest
      */
     public function throttleKey(): string
     {
-        return Str::transliterate(Str::lower($this->string('email')).'|'.$this->ip());
+        return Str::transliterate(Str::lower($this->string('name')).'|'.$this->ip());
     }
 }
