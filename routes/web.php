@@ -45,7 +45,9 @@ Route::get('/ranchodonaelia', [SitioController::class, 'mostrarCentro'])->name('
 Route::get('/rocapartida', [SitioController::class, 'mostrarCentro'])->name('rocapartida');
 Route::get('/selvaelmarinero', [SitioController::class, 'mostrarCentro'])->name('selvaelmarinero');
 
-
+Route::get('/register', function () {
+    return Inertia::render('Auth/Register');
+})->name('register');
 /*
 |--------------------------------------------------------------------------
 | Dashboard
