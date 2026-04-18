@@ -122,7 +122,7 @@ generarGrafica2();
 
 	<AuthenticatedLayout>
 		<template #header>
-			Dashboardoo
+			Dashboardooooo
 		</template>
 		
 		<div class="p-4 bg-white rounded-lg shadow-xs">
