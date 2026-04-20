@@ -14,11 +14,13 @@ use App\Http\Controllers\CentrosturistController;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/dashboard', function () {
+
+Route::get('/dashboard', function () {//nombre la ruta como dashboard porque sin ecoturismolostuxtlas.com nos mandaba al dasboard
     return redirect('/dashboard');
 });
 
-Route::get('/', [SitioController::class, 'inicio'])->name('inicio');
+Route::get('/', [SitioController::class, 'inicio'])->name('inicio');//le quité turismocomunitario
+
 
 Route::get('/centro/{nombre}', [SitioController::class, 'centro'])->name('centro.mostrar');
 
