@@ -14,11 +14,11 @@ use App\Http\Controllers\CentrosturistController;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return redirect('/dashboard');
 });
 
-Route::get('/turismocomunitario', [SitioController::class, 'inicio'])->name('inicio');
+Route::get('/', [SitioController::class, 'inicio'])->name('inicio');
 
 Route::get('/centro/{nombre}', [SitioController::class, 'centro'])->name('centro.mostrar');
 
