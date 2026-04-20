@@ -15,28 +15,28 @@
         </button>
 
         <img
-          src="/resources/logos/header3.jpg"
+          src="/storage/logos/header3.jpg"
           class="block md:hidden w-auto h-5 object-contain m-auto"
         />
 
         <img
-          src="/resources/logos/SEP.png"
+          src="/storage/logos/SEP.png"
           alt="SEP"
           class="hidden lg:block h-9 m-auto"
         />
 
         <img
-          src="/resources/logos/SECTUR.png"
+          src="/storage/logos/SECTUR.png"
           alt="SECTUR"
           class="hidden md:block h-9 m-auto"
         />
         <img
-          src="/resources/logos/TECNM.png"
+          src="/storage/logos/TECNM.png"
           alt="TECNM"
           class="hidden md:block h-9 m-auto"
         />
         <img
-          src="/resources/logos/ITSSAT.jpg"
+          src="/storage/logos/ITSSAT.jpg"
           alt="ITSSAT"
           class="hidden md:block h-9 m-auto"
         />
