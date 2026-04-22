@@ -94,7 +94,7 @@ const centerActIds = computed(() => {
   <!-- Contenedor de imagen -->
   <div>
     <img
-      :src="`/storage/${centrosturist.imgcentur}`"
+      :src="`/${centrosturist.imgcentur}`"
       :alt="centrosturist.nomcentur"
       class="w-full md:w-[320px] h-64 md:h-64 object-cover rounded-lg shadow-md  mb-2"
     />
@@ -129,7 +129,7 @@ const centerActIds = computed(() => {
             <div class="w-full h-36 rounded-lg overflow-hidden mb-3">
               <img
                 v-if="guias.imgguiatur" 
-                :src="`/storage/${guias.imgguiatur}`"
+                :src="`/${guias.imgguiatur}`"
                 :alt="guias.nomguiatur"
                 class="w-full h-full object-cover"
               />
