@@ -6,6 +6,7 @@
       leave-active-class="transition ease-in-out duration-150"
       leave-from-class="opacity-100"
       leave-to-class="opacity-0">
+      <!-- Clic fuera de menú movil -->
     <div v-show="$page.props.showingMobileMenu" @click="$page.props.showingMobileMenu = false" class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"></div>
   </transition>
   <transition
