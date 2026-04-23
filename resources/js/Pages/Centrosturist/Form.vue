@@ -57,8 +57,10 @@ const titleform = ref(
     props.centrosturist == null ? 'Crear Centro Turístico' : 'Editar Centro Turístico'
 );
 
+ 
+
 const req = ref('*Campo obligatorio');
-const srcImg = ref('/storage/img/example.jpg');
+const srcImg = ref('/public/img/example.jpg');
 const msj = ref('');
 const classMsj = ref('hidden');
 const optionsServicios = ref([]);
@@ -96,7 +98,7 @@ const showImg = (e) => {
 };
 
 if (props.centrosturist != null && props.centrosturist.imgcentur) {
-    srcImg.value = '/storage/' + props.centrosturist.imgcentur;
+    srcImg.value = '/public/' + props.centrosturist.imgcentur;
 }
 
 
@@ -111,7 +113,7 @@ if (props.centrosturist != null) {
     form.telcentur = props.centrosturist.telcentur;
     form.corcentur = props.centrosturist.corcentur;
     form.idproduct = props.centrosturist.idproduct;
-    srcImg.value = '/storage/' + props.centrosturist.imgcentur;
+    srcImg.value = '/public/' + props.centrosturist.imgcentur;
 }
 
 
@@ -121,7 +123,7 @@ const guardar = () => {
             forceFormData: true,
             onSuccess: () => {
                 ok('Centro Turístico creado con éxito');
-                srcImg.value = '/storage/img/example.jpg';
+                srcImg.value = '/public/img/example.jpg';
             },
         });
     } else {
