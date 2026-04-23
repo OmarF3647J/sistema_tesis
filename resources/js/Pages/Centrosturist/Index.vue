@@ -145,9 +145,11 @@ onMounted(() => {
                                 <!-- <img v-if="centro.imgcentur" :src="`/${centro.imgcentur}`" alt="Imagen" class="rounded" width="75"/> -->
                                 <img 
                                 v-if="centro.imgcentur" 
-                                :src="centro.imgcentur.startsWith('/') 
+                                :src="centro.imgcentur.startsWith('http') 
                                         ? centro.imgcentur 
-                                        : '/' + centro.imgcentur" 
+                                        : centro.imgcentur.startsWith('/') 
+                                            ? centro.imgcentur 
+                                            : '/' + centro.imgcentur" 
                                 width="75"
                                 />
                             </td>
