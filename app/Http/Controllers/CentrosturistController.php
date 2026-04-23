@@ -81,7 +81,20 @@ class CentrosturistController extends Controller
         if ($request->hasFile('imgcentur')) {
             $file = $request->file('imgcentur');
             $name = time() . '.' . $file->getClientOriginalExtension();
+            // $file->move(public_path('img'), $name);
+            // Ruta Laravel
+            $pathLaravel = public_path('img/' . $name);
+            // Ruta pública real
+            $pathPublic = '/home1/chris240/public_html/img/' . $name;
+            // Mover primero a Laravel
             $file->move(public_path('img'), $name);
+            // Copiar a public_html
+            copy($pathLaravel, $pathPublic);
+            // Guardar en BD
+            $centrosturist->imgcentur = 'img/' . $name;
+
+
+
 
             $centrosturist->imgcentur = 'img/' . $name;
         } else {
@@ -130,16 +143,46 @@ class CentrosturistController extends Controller
         $centrosturist->idproduct = $data['idproduct'];
         
         // codigo guardado imagenes
+        // if ($request->hasFile('imgcentur')) {
+        //     if ($centrosturist->imgcentur && file_exists(public_path($centrosturist->imgcentur))) {
+        //         unlink(public_path($centrosturist->imgcentur));
+        //     }
+        //     $file = $request->file('imgcentur');
+        //     $name = time() . '.' . $file->getClientOriginalExtension();
+        //     $file->move(public_path('img'), $name);
+
+        //     $centrosturist->imgcentur = 'img/' . $name;
+        // }
+
+
+
+        // codgio IA guardado imagenes 
         if ($request->hasFile('imgcentur')) {
+
+            // Eliminar anterior (Laravel)
             if ($centrosturist->imgcentur && file_exists(public_path($centrosturist->imgcentur))) {
                 unlink(public_path($centrosturist->imgcentur));
             }
+
+            // Eliminar anterior (public_html)
+            $oldPublic = '/home1/chris240/public_html/' . $centrosturist->imgcentur;
+            if ($centrosturist->imgcentur && file_exists($oldPublic)) {
+                unlink($oldPublic);
+            }
+
             $file = $request->file('imgcentur');
             $name = time() . '.' . $file->getClientOriginalExtension();
+
+            $pathLaravel = public_path('img/' . $name);
+            $pathPublic = '/home1/chris240/public_html/img/' . $name;
+
+            // Guardar
             $file->move(public_path('img'), $name);
+            copy($pathLaravel, $pathPublic);
 
             $centrosturist->imgcentur = 'img/' . $name;
         }
+
         // ------
         
         $centrosturist->save();
