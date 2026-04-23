@@ -98,7 +98,7 @@ const showImg = (e) => {
 };
 
 if (props.centrosturist != null && props.centrosturist.imgcentur) {
-    srcImg.value = '/public/' + props.centrosturist.imgcentur;
+    srcImg.value = '/' + props.centrosturist.imgcentur;
 }
 
 
