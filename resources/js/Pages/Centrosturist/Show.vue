@@ -94,7 +94,7 @@ const centerActIds = computed(() => {
   <!-- Contenedor de imagen -->
   <div>
     <img
-      :src="`/${centrosturist.imgcentur}`"
+      :src="`/public/${centrosturist.imgcentur}`"
       :alt="centrosturist.nomcentur"
       class="w-full md:w-[320px] h-64 md:h-64 object-cover rounded-lg shadow-md  mb-2"
     />
