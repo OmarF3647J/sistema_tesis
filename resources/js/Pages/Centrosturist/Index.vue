@@ -141,7 +141,22 @@ onMounted(() => {
                             <td class="px-4 py-3 text-sm">{{ centro.telcentur }}</td>
                             <td class="px-4 py-3 text-sm">{{ centro.corcentur }}</td>
                             <td class="px-4 py-3 text-sm" >
-                                <img v-if="centro.imgcentur" :src="`/${centro.imgcentur}`" alt="Imagen" class="rounded" width="75"/>
+                                <!-- <img class="rounded-lg" :src="'storage'+centro.imgcentur" width="75"> -->
+                                <!-- <img v-if="centro.imgcentur" :src="`/${centro.imgcentur}`" alt="Imagen" class="rounded" width="75"/> -->
+                                <img 
+                            v-if="centro.imgcentur" 
+                            :src="centro.imgcentur.startsWith('http') 
+                                    ? centro.imgcentur 
+                                    : centro.imgcentur.startsWith('/') 
+                                        ? centro.imgcentur 
+                                        : '/' + centro.imgcentur" 
+                            width="75"
+                            />
+                            <!-- <img 
+                                v-if="centro.imgcentur" 
+                                :src="`/public/img/${centro.imgcentur}`" 
+                                width="75"
+                            /> -->
                             </td>
                             <!-- <td class="px-4 py-3 text-sm">{{ centro.producto.nomproduct }}</td> -->
                             <td class="px-4 py-3 text-sm">
