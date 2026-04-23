@@ -142,11 +142,25 @@ onMounted(() => {
                             <td class="px-4 py-3 text-sm">{{ centro.corcentur }}</td>
                             <td class="px-4 py-3 text-sm" >
                                 <!-- <img class="rounded-lg" :src="'storage'+centro.imgcentur" width="75"> -->
-                                <img v-if="centro.imgcentur" :src="`/${centro.imgcentur}`" alt="Imagen" class="rounded" width="75"/>
+                                <!-- <img v-if="centro.imgcentur" :src="`/${centro.imgcentur}`" alt="Imagen" class="rounded" width="75"/> -->
+                                <img 
+                            v-if="centro.imgcentur" 
+                            :src="centro.imgcentur.startsWith('http') 
+                                    ? centro.imgcentur 
+                                    : centro.imgcentur.startsWith('/') 
+                                        ? centro.imgcentur 
+                                        : '/' + centro.imgcentur" 
+                            width="75"
+                            />
+                            <!-- <img 
+                                v-if="centro.imgcentur" 
+                                :src="`/public/img/${centro.imgcentur}`" 
+                                width="75"
+                            /> -->
                             </td>
                             <!-- <td class="px-4 py-3 text-sm">{{ centro.producto.nomproduct }}</td> -->
                             <td class="px-4 py-3 text-sm">
-                                
+                                 
                                 <a :href="route('centrosturist.pdf', centro.idcentur)" target="_blank">
                                 <DangerButton >
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">

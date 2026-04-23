@@ -77,12 +77,17 @@ class CentrosturistController extends Controller
         $centrosturist->telcentur = $data['telcentur'];
         $centrosturist->corcentur = $data['corcentur'];
         $centrosturist->idproduct = $data['idproduct'];
+        // codigo guardado imagenes
         if ($request->hasFile('imgcentur')) {
-            $path = $request->file('imgcentur')->store('img', 'public');
-            $centrosturist->imgcentur = $path;
+            $file = $request->file('imgcentur');
+            $name = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('img'), $name);
+
+            $centrosturist->imgcentur = 'img/' . $name;
         } else {
             $centrosturist->imgcentur = null;
         }   
+        // ----------------------
         $centrosturist->save();
         $centrosturist->actividadturist()->sync($request->input('idacttur', []));
         $centrosturist->guiasturist()->sync($request->input('idguiatur', []));
@@ -123,13 +128,20 @@ class CentrosturistController extends Controller
         $centrosturist->telcentur = $data['telcentur'];
         $centrosturist->corcentur = $data['corcentur'];
         $centrosturist->idproduct = $data['idproduct'];
+        
+        // codigo guardado imagenes
         if ($request->hasFile('imgcentur')) {
-            if ($centrosturist->imgcentur && Storage::disk('public')->exists($centrosturist->imgcentur)) {
-                Storage::disk('public')->delete($centrosturist->imgcentur);
+            if ($centrosturist->imgcentur && file_exists(public_path($centrosturist->imgcentur))) {
+                unlink(public_path($centrosturist->imgcentur));
             }
-            $path = $request->file('imgcentur')->store('img', 'public');
-            $centrosturist->imgcentur = $path;
+            $file = $request->file('imgcentur');
+            $name = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('img'), $name);
+
+            $centrosturist->imgcentur = 'img/' . $name;
         }
+        // ------
+        
         $centrosturist->save();
         $centrosturist->actividadturist()->sync($request->input('idacttur', []));
         $centrosturist->guiasturist()->sync($request->input('idguiatur', []));
@@ -178,7 +190,6 @@ class CentrosturistController extends Controller
         if ($centrosturist->imgcentur) {
             Storage::disk('public')->delete($centrosturist->imgcentur);
         }
-
         $centrosturist->delete();
         return redirect()->route('centrosturist.index')->with('success', 'Centro turístico eliminado con éxito');
     }
