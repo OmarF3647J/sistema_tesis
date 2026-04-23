@@ -154,7 +154,7 @@ onMounted(() => {
                             /> -->
                             <img 
                                 v-if="centro.imgcentur" 
-                                :src="`/${centro.imgcentur}`" 
+                                :src="`/public/img/${centro.imgcentur}`" 
                                 width="75"
                             />
                             </td>
