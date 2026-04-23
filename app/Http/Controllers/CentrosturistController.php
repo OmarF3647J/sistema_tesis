@@ -77,6 +77,7 @@ class CentrosturistController extends Controller
         $centrosturist->telcentur = $data['telcentur'];
         $centrosturist->corcentur = $data['corcentur'];
         $centrosturist->idproduct = $data['idproduct'];
+        // codigo guardado imagenes
         if ($request->hasFile('imgcentur')) {
             $file = $request->file('imgcentur');
             $name = time() . '.' . $file->getClientOriginalExtension();
@@ -86,6 +87,7 @@ class CentrosturistController extends Controller
         } else {
             $centrosturist->imgcentur = null;
         }   
+        // ----------------------
         $centrosturist->save();
         $centrosturist->actividadturist()->sync($request->input('idacttur', []));
         $centrosturist->guiasturist()->sync($request->input('idguiatur', []));
@@ -127,6 +129,7 @@ class CentrosturistController extends Controller
         $centrosturist->corcentur = $data['corcentur'];
         $centrosturist->idproduct = $data['idproduct'];
         
+        // codigo guardado imagenes
         if ($request->hasFile('imgcentur')) {
             if ($centrosturist->imgcentur && file_exists(public_path($centrosturist->imgcentur))) {
                 unlink(public_path($centrosturist->imgcentur));
@@ -137,7 +140,7 @@ class CentrosturistController extends Controller
 
             $centrosturist->imgcentur = 'img/' . $name;
         }
-        
+        // ------
         
         $centrosturist->save();
         $centrosturist->actividadturist()->sync($request->input('idacttur', []));
