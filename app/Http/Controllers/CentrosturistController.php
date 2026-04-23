@@ -190,7 +190,6 @@ class CentrosturistController extends Controller
         if ($centrosturist->imgcentur) {
             Storage::disk('public')->delete($centrosturist->imgcentur);
         }
-
         $centrosturist->delete();
         return redirect()->route('centrosturist.index')->with('success', 'Centro turístico eliminado con éxito');
     }
