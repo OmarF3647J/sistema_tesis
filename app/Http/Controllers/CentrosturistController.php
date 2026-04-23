@@ -187,14 +187,12 @@ class CentrosturistController extends Controller
     }
     public function destroy(Centrosturist $centrosturist)
     {
-        if ($centrosturist->imgcentur && file_exists(public_path($centrosturist->imgcentur))) {
-            unlink(public_path($centrosturist->imgcentur));
+        if ($centrosturist->imgcentur) {
+            Storage::disk('public')->delete($centrosturist->imgcentur);
         }
 
         $centrosturist->delete();
-
-        return redirect()->route('centrosturist.index')
-            ->with('success', 'Centro turístico eliminado con éxito');
+        return redirect()->route('centrosturist.index')->with('success', 'Centro turístico eliminado con éxito');
     }
     public function pdf(Centrosturist $centrosturist)
     {
