@@ -210,6 +210,7 @@ class CentrosturistController extends Controller
             'centrosturist' => $centrosturist,
         ]);
     }
+    
     public function edit(Centrosturist $centrosturist)
     {
         return Inertia::render('Centrosturist/Edit', [
