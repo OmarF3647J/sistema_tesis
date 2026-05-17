@@ -123,7 +123,7 @@ const guardar = () => {
             forceFormData: true,
             onSuccess: () => {
                 ok('Centro Turístico creado con éxito');
-                srcImg.value = '/img/example.jpg';
+                srcImg.value = '/img/example2.jpg';
             },
         });
     } else {
