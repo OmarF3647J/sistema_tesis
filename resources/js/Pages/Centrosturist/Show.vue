@@ -95,7 +95,7 @@ const centerActIds = computed(() => {
   <div>
     <img
   v-if="centrosturist.imgcentur"
-  :src="centrosturist.imgcentur.startsWith('http')
+  :src="centrosturist.imgcentur.startsWith('https')
       ? centrosturist.imgcentur
       : centrosturist.imgcentur.startsWith('/')
           ? centrosturist.imgcentur
