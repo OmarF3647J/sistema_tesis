@@ -60,7 +60,7 @@ const titleform = ref(
  
 
 const req = ref('*Campo obligatorio');
-const srcImg = ref('/img/example.jpg');
+const srcImg = ref('/img/exaple.jpg');
 const msj = ref('');
 const classMsj = ref('hidden');
 const optionsServicios = ref([]);
