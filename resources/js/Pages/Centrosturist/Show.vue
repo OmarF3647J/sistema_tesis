@@ -94,10 +94,15 @@ const centerActIds = computed(() => {
   <!-- Contenedor de imagen -->
   <div>
     <img
-      :src="`/${centrosturist.imgcentur}`"
-      :alt="centrosturist.nomcentur"
-      class="w-full md:w-[320px] h-64 md:h-64 object-cover rounded-lg shadow-md  mb-2"
-    />
+  v-if="centrosturist.imgcentur"
+  :src="centrosturist.imgcentur.startsWith('http')
+      ? centrosturist.imgcentur
+      : centrosturist.imgcentur.startsWith('/')
+          ? centrosturist.imgcentur
+          : '/' + centrosturist.imgcentur"
+  :alt="centrosturist.nomcentur"
+  class="w-full md:w-[320px] h-64 md:h-64 object-cover rounded-lg shadow-md mb-2"
+/>
   </div>
 
   <!-- Contenedor de texto -->
