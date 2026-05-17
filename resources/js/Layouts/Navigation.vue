@@ -10,7 +10,7 @@
       </Link>
 
       <ul class="mt-6">
-        <li class="relative px-6 py-3">
+        <li class="relative px-6 py-6">
           <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
             <template #icon>
               <svg class="w-5 h-5" aria-hidden="true" fill="none" stroke-linecap="round"
