@@ -12,7 +12,7 @@ Options +SymLinksIfOwnerMatch
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # Handle X-XSRF-Token Header
- RewriteCond %{HTTP:x-xsrf-token} .
+    RewriteCond %{HTTP:x-xsrf-token} .
     RewriteRule .* - [E=HTTP_X_XSRF_TOKEN:%{HTTP:X-XSRF-Token}]
 
     RewriteCond %{REQUEST_FILENAME} !-d
