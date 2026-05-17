@@ -60,7 +60,7 @@ const titleform = ref(
  
 
 const req = ref('*Campo obligatorio');
-const srcImg = ref('/imges/noimage.jpg');
+const srcImg = ref('/images/noimage.jpg');
 const msj = ref('');
 const classMsj = ref('hidden');
 const optionsServicios = ref([]);
@@ -123,7 +123,7 @@ const guardar = () => {
             forceFormData: true,
             onSuccess: () => {
                 ok('Centro Turístico creado con éxito');
-                srcImg.value = '/imges/noimage.jpg';
+                srcImg.value = '/images/noimage.jpg';
             },
         });
     } else {
