@@ -60,7 +60,7 @@ const titleform = ref(
  
 
 const req = ref('*Campo obligatorio');
-const srcImg = ref('/public/img/example.jpg');
+const srcImg = ref('/img/example.jpg');
 const msj = ref('');
 const classMsj = ref('hidden');
 const optionsServicios = ref([]);
@@ -113,7 +113,7 @@ if (props.centrosturist != null) {
     form.telcentur = props.centrosturist.telcentur;
     form.corcentur = props.centrosturist.corcentur;
     form.idproduct = props.centrosturist.idproduct;
-    srcImg.value = '/public/' + props.centrosturist.imgcentur;
+    srcImg.value = '/' + props.centrosturist.imgcentur;
 }
 
 
@@ -123,7 +123,7 @@ const guardar = () => {
             forceFormData: true,
             onSuccess: () => {
                 ok('Centro Turístico creado con éxito');
-                srcImg.value = '/public/img/example.jpg';
+                srcImg.value = '/img/example.jpg';
             },
         });
     } else {
