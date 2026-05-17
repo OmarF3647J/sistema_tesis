@@ -103,6 +103,13 @@ const centerActIds = computed(() => {
   :alt="centrosturist.nomcentur"
   class="w-full md:w-[320px] h-64 md:h-64 object-cover rounded-lg shadow-md mb-2"
 />
+
+<div
+  v-else
+  class="w-full md:w-[320px] h-64 flex items-center justify-center bg-gray-100 rounded-lg text-gray-400"
+>
+  Sin imagen disponible
+</div>
   </div>
 
   <!-- Contenedor de texto -->
