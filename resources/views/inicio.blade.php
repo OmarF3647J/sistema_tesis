@@ -256,7 +256,7 @@
 
 <!---bounce left--->
 <div class="wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.1s">
-  <div class="descripcion_centros"> Estos lugares ofrecen alojamiento en cabañas, sanitarios, espacio para camping, restaruantes, artesanías y <b>paisajes naturales inolvidables.</b></div>
+  <div class="descripcion_centros"> Estos lugares ofrecen alojamiento en cabañas, sanitarios, espacio para camping, restaurantes, artesanías y <b>paisajes naturales inolvidables.</b></div>
 </div><!-- end boounce -->
 
 
