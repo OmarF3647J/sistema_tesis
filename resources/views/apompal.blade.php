@@ -296,10 +296,14 @@
 
             <div class="grid-itemgt">
 
-                
+                <img 
+                    src="{{ asset($agencia->imgguiatur) }}" 
+                    alt="{{ $agencia->nomguiatur }}"
+                    loading="lazy"
+                >
 
                 <li>{{ $agencia->nomguiatur }}
-                  src="{{ asset($agencia->imgguiatur) }}
+                  
                 </li>
 
             </div>
