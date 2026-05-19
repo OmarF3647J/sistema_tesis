@@ -103,7 +103,27 @@ Route::middleware('auth')->group(function () {
 /*
 |--------------------------------------------------------------------------
 | Auth routes
-|--------------------------------------------------------------------------
+|---------------------
+
+-----------------------------------------------------
 */
+
+
+
+
+//ruta de sitemap
+use Spatie\Sitemap\SitemapGenerator;
+
+Route::get('/generar-sitemap', function () {
+    // Esto va a escanear automáticamente toda tu web y creará el archivo en la carpeta public
+    SitemapGenerator::create('https://ecoturismolostuxtlas.com')
+        ->writeToFile(public_path('sitemap.xml'));
+
+    return '¡Sitemap creado con éxito en la carpeta public!';
+});
+
+
+
+
 
 require __DIR__.'/auth.php';
