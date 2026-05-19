@@ -85,7 +85,7 @@ public function mostrarCentro($id = null)
     // centro específico con actividades
     $guias = Centrosturist::with('guiasturists')->findOrFail($id);
 
-    return view($vista, compact('centros', 'centro'));
+    return view($vista, compact('centros', 'centro', 'guias'));
 }
 
 
