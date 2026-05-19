@@ -283,35 +283,26 @@
 <!-- Agrupador guias turisticas -->
 <div class="agrupador-guias-turisticas">
 
-
-
-
-
-
     <div class="agrupador-itemgt-tarjeta">
-
     @if($centro->guiasturist->isNotEmpty())
         @foreach($centro->guiasturist as $agencia)
 
-
-
-
         <div class="grid-itemgt">
-              <img 
-                    src="{{ asset($agencia->imgguiatur) }}" 
-                    alt="{{ $agencia->nomguiatur }}"
-                    loading="lazy"
-                >        </div>
-            
-
-             <div class="tarjeta-guia">
-        <div style="text-align: center;">
-          <h3>{{ $agencia->nomguiatur }}</h3>
+            <img src="{{ asset($agencia->imgguiatur) }}" alt="{{ $agencia->nomguiatur }}" loading="lazy">       
         </div>
-      </div>
 
+        <div class="tarjeta-guia">
 
-            
+          <div style="text-align: center;">
+            <h3>{{ $agencia->nomguiatur }}</h3>
+          </div>
+        <h4>Responsable: <span style="font-weight: 300;">{{ $agencia->respguiatur }}</span> </h4>
+        <h4>Número: <span style="font-weight: 300;">{{ $agencia->numguiatur }}</span></h4>
+        <h4>Correo: <span style="font-weight: 300;">{{ $agencia->correoguiatur }}</span></h4>   
+        <h4>Actividades que realizan <span style="font-weight: 300;">{{ $agencia->actguiatur }}</span></h4>
+        
+
+        </div>
         @endforeach
     @else
         <p>No hay agencias turísticas registradas.</p>
