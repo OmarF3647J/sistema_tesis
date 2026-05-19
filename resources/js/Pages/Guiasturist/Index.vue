@@ -39,7 +39,13 @@ const openModalDelete = (guias) => {
     form.nomresguiatur = guias.nomresguiatur;
     form.telguiatur = guias.telguiatur;
     form.corguiatur = guias.corguiatur;
-    form.imgguiatur = guias.imgguiatur;
+
+
+    // --------------------------------------------------
+    // form.imgguiatur = guias.imgguiatur;
+    // --------------------------------------------------
+
+
     form.idacttur = guias.actividadturist.idacttur;
     // form.idacttur = guias.actividadturist.map(act => act.idacttur); sugerido por IA/ si es necesario llenar el formulario con las actividades asociadas
     // v.value = guias; //asignar el objeto completo para mostrar las
@@ -142,7 +148,15 @@ const ok = (m) => {
                             <td class="px-4 py-3 text-sm">{{ guias.telguiatur }}</td>
                             <td class="px-4 py-3 text-sm">{{ guias.corguiatur }}</td>
                             <td class="px-4 py-3 text-sm" >
-                                <img v-if="guias.imgguiatur" :src="`/storage/${guias.imgguiatur}`" class="rounded" width="75">
+                                <img 
+                            v-if="guias.imgguiatur" 
+                            :src="guias.imgguiatur.startsWith('https') 
+                                    ? guias.imgguiatur 
+                                    : guias.imgguiatur.startsWith('/') 
+                                        ? guias.imgguiatur 
+                                        : '/' + guias.imgguiatur" 
+                            width="75"
+                            />
                             </td>
                             <td class="px-4 py-3 text-sm">
                                 <NavLink :href="route('guiasturist.show', guias.idguiatur)">

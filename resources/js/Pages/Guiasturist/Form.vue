@@ -54,7 +54,7 @@ const titleform = ref(
 );
 
 const req = ref('*Campo obligatorio');
-const srcImg = ref('/storage/img/example.jpg');
+const srcImg = ref('/img/example2.jpg');
 const msj = ref('');
 const classMsj = ref('hidden'); //clase del mensaje
 
@@ -227,7 +227,7 @@ const showImg = (e) => {
 
 // si tenemos centrosturist con imagen, mostrarla
 if (props.guiasturist != null && props.guiasturist.imgguiatur) {
-    srcImg.value = '/storage/' + props.guiasturist.imgguiatur;
+    srcImg.value = '/' + props.guiasturist.imgguiatur;
 }
 
 
@@ -247,7 +247,7 @@ const guardar = () => {
             forceFormData: true,
             onSuccess: () => {
                 ok('Centro Turístico creado con éxito');
-                srcImg.value = '/storage/img/example.jpg';
+                srcImg.value = '/img/example2.jpg';
             },
         });
     } else {

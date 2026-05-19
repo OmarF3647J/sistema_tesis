@@ -101,13 +101,24 @@ const props = defineProps({guiasturist: {type:Object},centrosturist: {type:Objec
     </div>
 
     <!-- COLUMNA DERECHA (IMAGEN + DESCRIPCIÓN ARRIBA) -->
+
+
+
+
     <div class="space-y-4 p-4">
-      <img
-        :src="`/storage/${guiasturist.imgguiatur}`"
-        :alt="guiasturist.nomguiatur"
-        class="w-full md:w-[320px] h-64 md:h-64 object-cover rounded-lg shadow-md"
-      />
-    </div>
+    <img
+      v-if="guiasturist.imgguiatur"
+      :src="guiasturist.imgguiatur.startsWith('https')
+          ? guiasturist.imgguiatur
+          : guiasturist.imgguiatur.startsWith('/')
+              ? guiasturist.imgguiatur
+              : '/' + guiasturist.imgguiatur"
+      :alt="guiasturist.nomguiatur"
+      class="w-full md:w-[320px] h-64 md:h-64 object-cover rounded-lg shadow-md mb-2"
+    />
+  </div>
+
+    
 
   </div>
 </div>

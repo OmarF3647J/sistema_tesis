@@ -77,6 +77,7 @@ class CentrosturistController extends Controller
         $centrosturist->telcentur = $data['telcentur'];
         $centrosturist->corcentur = $data['corcentur'];
         $centrosturist->idproduct = $data['idproduct'];
+
         // codigo guardado imagenes
         if ($request->hasFile('imgcentur')) {
             $file = $request->file('imgcentur');
@@ -229,6 +230,7 @@ class CentrosturistController extends Controller
     {
 
     }
+    
     public function destroy(Centrosturist $centrosturist)
     {
         if ($centrosturist->imgcentur) {
@@ -237,6 +239,8 @@ class CentrosturistController extends Controller
         $centrosturist->delete();
         return redirect()->route('centrosturist.index')->with('success', 'Centro turístico eliminado con éxito');
     }
+
+    
     public function pdf(Centrosturist $centrosturist)
     {
         $centrosturist->load([

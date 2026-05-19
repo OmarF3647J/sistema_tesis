@@ -51,16 +51,22 @@ class GuiasturistController extends Controller
         $guiasturist->nomresguiatur = $data['nomresguiatur'];
         $guiasturist->telguiatur = $data['telguiatur'];
         $guiasturist->corguiatur = $data['corguiatur'];
+
         if ($request->hasFile('imgguiatur')) {
-            $path = $request->file('imgguiatur')->store('img', 'public');
-            $guiasturist->imgguiatur = $path;
+            $file = $request->file('imgguiatur');
+            $name = time() . '.' . $file->getClientOriginalExtension();
+            $pathLaravel = public_path('img/' . $name);
+            $pathPublic = '/home1/chris240/public_html/img/' . $name;
+             $file->move(public_path('img'), $name);
+            copy($pathLaravel, $pathPublic);
+            $guiasturist->imgguiatur = 'img/' . $name;
         } else {
             $guiasturist->imgguiatur = null;
         }
+
         $guiasturist->save();
         $guiasturist->actividadturist()->sync($request->input('idacttur', []));
         $guiasturist->centrosturist()->sync($request->input('idcentur', []));
-
         return redirect('guiasturist/create')->with('succes','Agencia turística creado con éxito');
     }
 
@@ -86,16 +92,32 @@ class GuiasturistController extends Controller
         $guiasturist->corguiatur = $data['corguiatur'];
 
         if ($request->hasFile('imgguiatur')) {
-            // eliminar imagen anterior si existe
-            if ($guiasturist->imgguiatur) {
-                Storage::disk('public')->delete($guiasturist->imgguiatur);
+
+            // Eliminar anterior (Laravel)
+            if ($centrosturist->imgguiatur && file_exists(public_path($centrosturist->imgguiatur))) {
+                unlink(public_path($centrosturist->imgguiatur));
             }
-            $path = $request->file('imgguiatur')->store('img', 'public');
-            $guiasturist->imgguiatur = $path;
+
+            // Eliminar anterior (public_html)
+            $oldPublic = '/home1/chris240/public_html/' . $centrosturist->imgguiatur;
+            if ($centrosturist->imgguiatur && file_exists($oldPublic)) {
+                unlink($oldPublic);
+            }
+
+            $file = $request->file('imgguiatur');
+            $name = time() . '.' . $file->getClientOriginalExtension();
+
+            $pathLaravel = public_path('img/' . $name);
+            $pathPublic = '/home1/chris240/public_html/img/' . $name;
+
+            // Guardar
+            $file->move(public_path('img'), $name);
+            copy($pathLaravel, $pathPublic);
+
+            $centrosturist->imgguiatur = 'img/' . $name;
         }
 
         $guiasturist->save();
-
         $guiasturist->actividadturist()->sync($request->input('idacttur', []));
         $guiasturist->centrosturist()->sync($request->input('idcentur', []));
 
@@ -127,9 +149,14 @@ class GuiasturistController extends Controller
     {
         
     }
+    
     public function destroy(Guiasturist $guiasturist)
     {
+        if ($guiasturist->imgguiatur) {
+            Storage::disk('public')->delete($guiasturist->imgguiatur);
+        }
         $guiasturist->delete();
         return redirect()->route('guiasturist.index')->with('success', 'Agencia turística eliminada correctamente');
     }
+
 }
