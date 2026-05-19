@@ -340,7 +340,7 @@
       </div>
     </div>
 
-    <div class="agrupador-itemgt-y-tarjeta">
+    <!-- <div class="agrupador-itemgt-y-tarjeta">
         <div class="grid-itemgt">
           <img src="{{ asset('images/ixmatis.jpg') }}" loading="lazy">
         </div>
@@ -369,7 +369,7 @@
         </div>
 
       </div>
-    </div>
+    </div> -->
 
     <div class="agrupador-itemgt-y-tarjeta">
         <div class="grid-itemgt">
