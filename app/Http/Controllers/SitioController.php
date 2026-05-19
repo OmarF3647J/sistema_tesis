@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Centrosturist;
+use App\Models\Guiasturist;
+
 
 
 
@@ -79,6 +81,9 @@ public function mostrarCentro($id = null)
 
     // centro específico con actividades
     $centro = Centrosturist::with('actividadturist')->findOrFail($id);
+
+    // centro específico con actividades
+    $guias = Centrosturist::with('guiasturists')->findOrFail($id);
 
     return view($vista, compact('centros', 'centro'));
 }
