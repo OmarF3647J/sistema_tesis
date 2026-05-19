@@ -291,9 +291,9 @@
             <h3>{{ $agencia->nomguiatur }}</h3>
           </div>
 
-          <h4>Responsable: <span style="font-weight: 300;">{{ $agencia->respguiatur }}</span> </h4>
-          <h4>Número: <span style="font-weight: 300;">{{ $agencia->numguiatur }}</span></h4>
-          <h4>Correo: <span style="font-weight: 300;">{{ $agencia->correoguiatur }}</span></h4>   
+          <h4>Responsable: <span style="font-weight: 300;">{{ $agencia->nomresguiatur }}</span> </h4>
+          <h4>Número: <span style="font-weight: 300;">{{ $agencia->telguiatur }}</span></h4>
+          <h4>Correo: <span style="font-weight: 300;">{{ $agencia->corguiatur }}</span></h4>   
           <h4>Actividades que realizan <span style="font-weight: 300;">{{ $agencia->actguiatur }}</span></h4>
       
           <br>
