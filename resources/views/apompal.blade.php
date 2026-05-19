@@ -291,32 +291,37 @@
     <div class="agrupador-itemgt-tarjeta">
 
     @if($centro->guiasturist->isNotEmpty())
-
         @foreach($centro->guiasturist as $agencia)
 
-            <div class="grid-itemgt">
 
-                <img 
+
+
+        <div class="grid-itemgt">
+              <img 
                     src="{{ asset($agencia->imgguiatur) }}" 
                     alt="{{ $agencia->nomguiatur }}"
                     loading="lazy"
-                >
+                >        </div>
+            
 
-                <li>{{ $agencia->nomguiatur }}
-                  
-                </li>
+             <div class="tarjeta-guia">
+        <div style="text-align: center;">
+          <h3>{{ $agencia->nomguiatur }}</h3>
+        </div>
+      </div>
 
-            </div>
 
+            
         @endforeach
-
     @else
-
         <p>No hay agencias turísticas registradas.</p>
-
     @endif
-
 </div>
+
+
+
+
+
 
 
 
