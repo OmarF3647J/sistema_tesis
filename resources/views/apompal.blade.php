@@ -290,15 +290,13 @@
 
     <div class="agrupador-itemgt-tarjeta">
     
-      @if(isset($guias) && $guias->guiasturists->isNotEmpty())
-        <ul class="lista-img">
-          @foreach ($guias->guiasturists as $nombreAgencia)
-            <li>{{ $nombreAgencia->nomguiatur ?? 'Guía #' . ($nombreAgencia->idguiatur ?? '-') }}</li>
-          @endforeach
-        </ul>
-      @else
-        <p>No hay actividades registradas para este centro (id = 2).</p>
-      @endif
+      @if($centro->guiasturist->isNotEmpty())
+
+    @foreach($centro->guiasturist as $agencia)
+        <li>{{ $agencia->nomguiatur }}</li>
+    @endforeach
+
+@endif
     </div>
 
 
