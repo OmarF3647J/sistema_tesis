@@ -266,6 +266,95 @@
 <br><br><br><br><br>
 
 
+<div class="titulo-guias">
+  Guías Turísticas Certificadas
+</div>
+
+<div class="wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.1s">
+  <div class="descripcion_guias"> Estas guías colaboran con este Centro Ecoturistico, pueden <b>llevarte</b> a este lugar y pueden ofrecerte algunas <b>actividades para que disfrutes de tu estancia... </b><br><br>¡Ponte en contacto con ellos y disfruta tu viaje!</div>
+</div>
+
+
+
+
+
+
+
+<!-- Agrupador guias turisticas -->
+<div class="agrupador-guias-turisticas">
+
+
+
+
+
+
+    <div class="agrupador-itemgt-tarjeta">
+    
+      @if(isset($guias) && $guias->guiasturists->isNotEmpty())
+        <ul class="lista-img">
+          @foreach ($guias->guiasturists as $nombreAgencia)
+            <li>{{ $nombreAgencia->nomguiatur ?? 'Guía #' . ($nombreAgencia->idguiatur ?? '-') }}</li>
+          @endforeach
+        </ul>
+      @else
+        <p>No hay actividades registradas para este centro (id = 2).</p>
+      @endif
+    </div>
+
+
+
+
+
+
+    <div class="agrupador-itemgt-tarjeta">
+        <div class="grid-itemgt">
+          <img src="{{ asset('images/degraaf-travel.jpg') }}" loading="lazy">
+        </div>
+      <div class="tarjeta-guia">
+        <div style="text-align: center;">
+          <h3>Degaaf Travel & Tours</h3>
+        </div>
+        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
+        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
+        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
+        <h4>Actividades que realizan <span style="font-weight: 300;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dignissimos consectetur, error fugiat soluta facilis molestiae.</span></h4>
+        <br>
+        <!-- Contenedor de iconos -->
+        <div class="btn-redes-sociales">
+          <a href="https://www.facebook.com/profile.php?id=100064519459589" target="_blank" class="cat">
+            <img src="{{ asset('images/favicon/facebook_circular.png') }}" alt="Facebook" loading="lazy">
+          </a>
+          <a href="https://www.instagram.com/degraaftraveltours?igsh=MWg3YTFsbjdmemlveQ%3D%3D&utm_source=qr&fbclid=IwY2xjawN6R-tleHRuA2FlbQIxMABicmlkETFBd3B5Q2JCN0FLY2pRdTlEc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHmAPC4UW07qkGHi7caS05Rp0OmKZiZQnAcT9zNxRqhhVkSfC5wmPF3CQ3sl8_aem_XNLgHFftYwkMk6AeiRMA4w" target="_blank" class="cat">
+            <img src="{{ asset('images/favicon/ig.png') }}" alt="Instagram" loading="lazy">
+          </a>
+          <a href="https://www.tiktok.com/@degraaf.travel.to?_r=1&_t=ZS-91B3jHc6KSg&fbclid=IwY2xjawN6SCdleHRuA2FlbQIxMABicmlkETFBd3B5Q2JCN0FLY2pRdTlEc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHk1QmcF-zDkXnHlBYhg7ieo2ktE70HKERQPlEtUvfCu8ZMd9TrU9y6daJJwT_aem_aWHbbPqZIeyRJD-mFh4PXw" target="_blank" class="cat">
+            <img src="{{ asset('images/favicon/tiktok-circular.png') }}" alt="Tiktok" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </div>
+
+
+</div><!--fin agrupador guias turisticas -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br>
 
 
 <div class="titulo-guias">
@@ -283,18 +372,14 @@
         <div class="grid-itemgt">
           <img src="{{ asset('images/degraaf-travel.jpg') }}" loading="lazy">
         </div>
-        
       <div class="tarjeta-guia">
-        
         <div style="text-align: center;">
           <h3>Degaaf Travel & Tours</h3>
         </div>
-
         <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
         <h4>Número: <span style="font-weight: 300;">bd</span></h4>
         <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
         <h4>Actividades que realizan <span style="font-weight: 300;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dignissimos consectetur, error fugiat soluta facilis molestiae.</span></h4>
-        
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -308,7 +393,6 @@
             <img src="{{ asset('images/favicon/tiktok-circular.png') }}" alt="Tiktok" loading="lazy">
           </a>
         </div>
-        
       </div>
     </div>
 
@@ -340,7 +424,36 @@
       </div>
     </div>
 
-    
+    <div class="agrupador-itemgt-y-tarjeta">
+        <div class="grid-itemgt">
+          <img src="{{ asset('images/ixmatis.jpg') }}" loading="lazy">
+        </div>
+
+      <div class="tarjeta-guia">
+
+        <div style="text-align: center;"> 
+            <h3>Ixmatis</h3>
+        </div>
+        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
+        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
+        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
+        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+        <br>
+        <!-- Contenedor de iconos -->
+        <div class="btn-redes-sociales">
+          <a href="https://www.facebook.com/Ixmatisturismo" target="_blank" class="cat">
+            <img src="{{ asset('images/favicon/facebook_circular.png') }}" alt="Facebook" loading="lazy">
+          </a>
+          <a href="https://instagram.com" target="_blank" class="cat">
+            <img src="{{ asset('images/favicon/ig.png') }}" alt="Instagram" loading="lazy">
+          </a>
+          <a href="https://tiktok.com" target="_blank" class="cat">
+            <img src="{{ asset('images/favicon/tiktok-circular.png') }}" alt="Tiktok" loading="lazy">
+          </a>
+        </div>
+
+      </div>
+    </div>
 
     <div class="agrupador-itemgt-y-tarjeta">
         <div class="grid-itemgt">
