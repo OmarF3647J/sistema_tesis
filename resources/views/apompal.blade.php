@@ -340,36 +340,7 @@
       </div>
     </div>
 
-    <!-- <div class="agrupador-itemgt-y-tarjeta">
-        <div class="grid-itemgt">
-          <img src="{{ asset('images/ixmatis.jpg') }}" loading="lazy">
-        </div>
-
-      <div class="tarjeta-guia">
-
-        <div style="text-align: center;"> 
-            <h3>Ixmatis</h3>
-        </div>
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
-        <br>
-        <!-- Contenedor de iconos -->
-        <div class="btn-redes-sociales">
-          <a href="https://www.facebook.com/Ixmatisturismo" target="_blank" class="cat">
-            <img src="{{ asset('images/favicon/facebook_circular.png') }}" alt="Facebook" loading="lazy">
-          </a>
-          <a href="https://instagram.com" target="_blank" class="cat">
-            <img src="{{ asset('images/favicon/ig.png') }}" alt="Instagram" loading="lazy">
-          </a>
-          <a href="https://tiktok.com" target="_blank" class="cat">
-            <img src="{{ asset('images/favicon/tiktok-circular.png') }}" alt="Tiktok" loading="lazy">
-          </a>
-        </div>
-
-      </div>
-    </div> -->
+    
 
     <div class="agrupador-itemgt-y-tarjeta">
         <div class="grid-itemgt">
