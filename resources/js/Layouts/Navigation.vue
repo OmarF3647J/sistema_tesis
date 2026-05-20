@@ -12,12 +12,12 @@
       <ul class="mt-6">
 
  
-<li class="relative px-4 py-2">
+<li class="relative px-5 py-5">
   <NavLink 
     :href="route('dashboard')" 
     :active="route().current('dashboard')"
     style="padding-top: 25px !important; padding-bottom: 25px !important; margin:0 !important;"
-    class="flex items-center w-full px-4 font-medium text-sm transition-colors duration-150"
+    class="flex items-center w-full px-5 font-medium text-sm transition-colors duration-150"
   >
     <template #icon>
       <svg class="w-5 h-5 mr-3" aria-hidden="true" fill="none" stroke-linecap="round"
