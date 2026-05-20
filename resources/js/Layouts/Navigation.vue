@@ -16,7 +16,7 @@
   <NavLink 
     :href="route('dashboard')" 
     :active="route().current('dashboard')"
-    style="padding-top: 18px !important; padding-bottom: 18px !important;"
+    style="padding-top: 25px !important; padding-bottom: 25px !important; margin:0 !important;"
     class="flex items-center w-full px-4 font-medium text-sm transition-colors duration-150"
   >
     <template #icon>
