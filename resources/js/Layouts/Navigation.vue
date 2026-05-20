@@ -12,7 +12,7 @@
       <ul class="mt-6">
 
 
-        
+
 <li class="relative px-4 py-1">
   <NavLink 
     :href="route('dashboard')" 
@@ -20,7 +20,7 @@
     class="flex items-center w-full px-4 py-3 rounded-lg font-medium text-sm transition-colors duration-150"
   >
     <template #icon>
-      <svg class="w-5 h-5 mr-3" aria-hidden="true" fill="none" ... > ... </svg>
+      <svg class="w-5 h-5 mr-3" aria-hidden="true" fill="none"> </svg>
     </template>
     Dashboard
   </NavLink>
