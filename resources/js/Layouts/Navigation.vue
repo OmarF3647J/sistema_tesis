@@ -26,7 +26,7 @@
         </li>
       -->
 
-        <li class="relative px-4 py-1.5">
+        <li class="relative px-4 py-8">
           <NavLink 
             :href="route('dashboard')" 
             :active="route().current('dashboard')"
