@@ -11,19 +11,16 @@
 
       <ul class="mt-6">
 
- 
-<li class="relative px-5 py-5">
+
+        
+<li class="relative px-4 py-1">
   <NavLink 
     :href="route('dashboard')" 
     :active="route().current('dashboard')"
-    style="padding-top: 25px !important; padding-bottom: 25px !important; margin:0 !important;"
-    class="flex items-center w-full px-5 font-medium text-sm transition-colors duration-150"
+    class="flex items-center w-full px-4 py-3 rounded-lg font-medium text-sm transition-colors duration-150"
   >
     <template #icon>
-      <svg class="w-5 h-5 mr-3" aria-hidden="true" fill="none" stroke-linecap="round"
-           stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-        <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
-      </svg>
+      <svg class="w-5 h-5 mr-3" aria-hidden="true" fill="none" ... > ... </svg>
     </template>
     Dashboard
   </NavLink>
