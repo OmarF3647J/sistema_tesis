@@ -26,11 +26,11 @@
         </li>
       -->
 
-        <li class="relative px-8 py-4">
+        <li class="relative px-4 py-2.5">
           <NavLink 
             :href="route('dashboard')" 
             :active="route().current('dashboard')"
-            class="flex items-center w-full px-4 py-3 rounded-lg font-medium text-sm transition-colors duration-150"
+            class="flex items-center w-full px-4 py-5 rounded-lg font-medium text-sm transition-colors duration-150"
           >
             <template #icon>
               <svg class="w-5 h-5 mr-3" aria-hidden="true" fill="none" stroke-linecap="rounded-lg"
