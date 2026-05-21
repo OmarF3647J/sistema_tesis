@@ -2,10 +2,10 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Turismo Comunitario Los Tuxtlas">
-  <meta name="description" content="Descubre el turismo comunitario en Los Tuxtlas, Veracruz. Vive experiencias únicas en Apompal, Roca Partida, Benito Juárez, Las Margaritas, Laguna del Ostión y más destinos naturales.">
-  <meta name="keywords" content="turismo comunitario, Los Tuxtlas, Veracruz, ecoturismo, Apompal, Roca Partida, Benito Juárez, Arrecifes, Cabañas Encantadas, Kan Tasejkan, Laguna del Ostión, Las Margaritas, naturaleza, aventura, cascadas, playas, senderismo, Instituto Tecnológico de San Andrés, Universidad, ITSSAT">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta name="author" content="Ecoturismo los tuxtlas, Turismo Comunitario en la región de Los Tuxtlas">
+  <meta name="description" content="Descubre el turismo comunitario en la región de Los Tuxtlas, Veracruz. Vive experiencias únicas en centros ecoturísticos como Lago El Apompal, Roca Partida, Benito Juárez, Las Margaritas, Laguna del Ostión y más destinos naturales.">
+  <meta name="keywords" content="ecoturismo los tuxtlas, ecoturismo en los tuxtlas, ecoturismo en la región de los Tuxtlas, centros ecoturisticos en los tuxtlas, centros ecoturisticos en la región de los tuxtlas, turismo comunitario de los tuxtlas, Los Tuxtlas Veracruz, que visitar en los Tuxtlas, que visitar en la región de los Tuxtlas, ecoturismo, Apompal, Roca Partida, Benito Juárez, Arrecifes, Cabañas Encantadas, Kan Tasejkan, Laguna del Ostión, Las Margaritas, naturaleza de los tuxtlas, aventura, cascadas, playas, senderismo, ">
 
 
   <link rel="preload" as="image" href="{{ asset('images/manglares-sontecomapan/portada.jpg') }}">
