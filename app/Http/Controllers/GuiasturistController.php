@@ -99,8 +99,8 @@ class GuiasturistController extends Controller
             }
 
             // Eliminar anterior (public_html)
-            $oldPublic = '/home1/chris240/public_html/' . $centrosturist->imgguiatur;
-            if ($centrosturist->imgguiatur && file_exists($oldPublic)) {
+            $oldPublic = '/home1/chris240/public_html/' . $guiasturist->imgguiatur;
+            if ($guiasturist->imgguiatur && file_exists($oldPublic)) {
                 unlink($oldPublic);
             }
 
@@ -114,7 +114,7 @@ class GuiasturistController extends Controller
             $file->move(public_path('img'), $name);
             copy($pathLaravel, $pathPublic);
 
-            $centrosturist->imgguiatur = 'img/' . $name;
+            $guiasturist->imgguiatur = 'img/' . $name;
         }
 
         $guiasturist->save();
