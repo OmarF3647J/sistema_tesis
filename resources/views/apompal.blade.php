@@ -325,8 +325,8 @@
           </ul> -->
           <h4>Actividades que realizan
            @foreach($agencia->actividadturist as $actividad)
-           <lu>
-                <li style="font-weight: 300; padding-left: 20px;">{{ $actividad->nomacttur }} <br> </li>
+           <lu style="padding-left: 20px;">
+                <li style="font-weight: 300; ">{{ $actividad->nomacttur }} <br> </li>
             <lu>
         @endforeach
         </h4>
