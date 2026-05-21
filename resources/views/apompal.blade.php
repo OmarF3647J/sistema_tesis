@@ -316,7 +316,7 @@
 
         @foreach($agencia->actividadturist as $actividad)
 
-            <li>
+            <li style="font-weight: 300;">
                 {{ $actividad->nomacttur }}
             </li>
 
