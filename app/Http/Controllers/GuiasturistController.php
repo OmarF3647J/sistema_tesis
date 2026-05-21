@@ -94,8 +94,8 @@ class GuiasturistController extends Controller
         if ($request->hasFile('imgguiatur')) {
 
             // Eliminar anterior (Laravel)
-            if ($centrosturist->imgguiatur && file_exists(public_path($centrosturist->imgguiatur))) {
-                unlink(public_path($centrosturist->imgguiatur));
+            if ($guiasturist->imgguiatur && file_exists(public_path($guiasturist->imgguiatur))) {
+                unlink(public_path($guiasturist->imgguiatur));
             }
 
             // Eliminar anterior (public_html)
