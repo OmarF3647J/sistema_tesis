@@ -279,17 +279,7 @@
         Actividades que realiza
     </h3>
 
-    <ul class="list-disc ml-6 text-sm text-gray-800 space-y-1">
-
-        @foreach($agencia->actividadturist as $actividad)
-
-            <li>
-                {{ $actividad->nomacttur }}
-            </li>
-
-        @endforeach
-
-    </ul>
+    
 </div>
 
 
