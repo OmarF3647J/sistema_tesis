@@ -324,7 +324,6 @@
 
           </ul> -->
           <h4>Actividades que realizan
-           @foreach($agencia->actividadturist as $actividad)
            <ul style="padding-left:20px; margin-top:5px;">
 
     @foreach($agencia->actividadturist as $actividad)
@@ -336,7 +335,6 @@
     @endforeach
 
 </ul>
-        @endforeach
         </h4>
           <br>
 
