@@ -312,12 +312,13 @@
                 </span>
             </h4>
 
-            <h4>
-                Actividades:
-                <span style="font-weight:300;">
-                    {{ $agencia->actguiatur }}
-                </span>
-            </h4>
+            <h4>Actividades:</h4>
+
+            <ul>
+                @foreach(explode(',', $agencia->actguiatur) as $actividad)
+                    <li>{{ trim($actividad) }}</li>
+                @endforeach
+            </ul>
 
         </div>
 
