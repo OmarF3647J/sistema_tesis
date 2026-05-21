@@ -118,7 +118,7 @@
 
 
 
-    <a href="{{ $centros[1]->nomcentur }}text=Hola, me gustaría agendar una cita ¿Cómo llego a este lugar?">
+    <a href="{{ $centros[1]->nomcentur }}text=Prueba, me gustaría agendar una cita ¿Cómo llego a este lugar?">
       <div title="Clic para enviar mensaje" class="btn_enviawsp">
         Quiero hablar con una persona...
       </div>
