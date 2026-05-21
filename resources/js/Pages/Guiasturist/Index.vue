@@ -44,9 +44,10 @@ const openModalDelete = (guias) => {
     // --------------------------------------------------
     // form.imgguiatur = guias.imgguiatur;
     // --------------------------------------------------
-
-
-    form.idacttur = guias.actividadturist.idacttur;
+form.idacttur = guias.actividadturist.map(act => act.idacttur);
+// --------------------------------------------------------
+    // form.idacttur = guias.actividadturist.idacttur;
+// ------------------------------------------------
     // form.idacttur = guias.actividadturist.map(act => act.idacttur); sugerido por IA/ si es necesario llenar el formulario con las actividades asociadas
     // v.value = guias; //asignar el objeto completo para mostrar las
     showModalDelete.value = true;
@@ -140,7 +141,7 @@ const ok = (m) => {
                         </tr>
                     </thead>
                     <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-100">
-                        <tr v-for="guias in guiasturist.data" :key="guias.idguiaturist"
+                        <tr v-for="guias in guiasturist.data" :key="guias.idguiatur"
                             class="text-gray-700">
                             <td class="px-4 py-3 text-sm">{{ guias.idguiatur }}</td>
                             <td class="px-4 py-3 text-sm">{{ guias.nomguiatur}}</td>
