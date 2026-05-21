@@ -312,7 +312,7 @@
                 </span>
             </h4>
 
-            <ul class="list-disc ml-6 text-sm text-gray-800 space-y-1">
+            <!-- <ul class="list-disc ml-6 text-sm text-gray-800 space-y-1">
 
         @foreach($agencia->actividadturist as $actividad)
 
@@ -322,7 +322,18 @@
 
         @endforeach
 
-    </ul>
+          </ul> -->
+
+           @foreach($agencia->actividadturist as $actividad)
+
+           <h4>Actividades que realizan <span style="font-weight: 300;">{{ $actividad->nomacttur }} <br> </span></h4>
+          <br>
+            
+
+        @endforeach
+
+          
+
 
         </div>
 
