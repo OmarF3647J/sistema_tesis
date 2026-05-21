@@ -274,12 +274,62 @@
   <div class="descripcion_guias"> Estas guías colaboran con este Centro Ecoturistico, pueden <b>llevarte</b> a este lugar y pueden ofrecerte algunas <b>actividades para que disfrutes de tu estancia... </b><br><br>¡Ponte en contacto con ellos y disfruta tu viaje!</div>
 </div>
 
-<div>
-    <h3 class="text-sm font-semibold text-gray-600 mb-2">
-        Actividades que realiza
-    </h3>
+<div class="agrupador-guias-turisticas">
 
-    
+    @foreach($centro->guiasturist as $agencia)
+
+    <div class="agrupador-itemgt-y-tarjeta">
+
+        <div class="grid-itemgt">
+            <img src="{{ asset($agencia->imgguiatur) }}"
+                 alt="{{ $agencia->nomguiatur }}">
+        </div>
+
+        <div class="tarjeta-guia">
+
+            <div style="text-align:center;">
+                <h3>{{ $agencia->nomguiatur }}</h3>
+            </div>
+
+            <h4>
+                Responsable:
+                <span style="font-weight:300;">
+                    {{ $agencia->nomresguiatur }}
+                </span>
+            </h4>
+
+            <h4>
+                Número:
+                <span style="font-weight:300;">
+                    {{ $agencia->telguiatur }}
+                </span>
+            </h4>
+
+            <h4>
+                Correo:
+                <span style="font-weight:300;">
+                    {{ $agencia->corguiatur }}
+                </span>
+            </h4>
+
+            <ul class="list-disc ml-6 text-sm text-gray-800 space-y-1">
+
+        @foreach($agencia->actividadturist as $actividad)
+
+            <li>
+                {{ $actividad->nomacttur }}
+            </li>
+
+        @endforeach
+
+    </ul>
+
+        </div>
+
+    </div>
+
+    @endforeach
+
 </div>
 
 
