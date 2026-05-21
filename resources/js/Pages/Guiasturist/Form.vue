@@ -54,7 +54,7 @@ const titleform = ref(
 );
 
 const req = ref('*Campo obligatorio');
-const srcImg = ref('/img/example2.jpg');
+const srcImg = ref('/img/example.jpg');
 const msj = ref('');
 const classMsj = ref('hidden'); //clase del mensaje
 
@@ -247,7 +247,7 @@ const guardar = () => {
             forceFormData: true,
             onSuccess: () => {
                 ok('Centro Turístico creado con éxito');
-                srcImg.value = '/img/example2.jpg';
+                srcImg.value = '/img/example.jpg';
             },
         });
     } else {
