@@ -18,32 +18,29 @@ class SitioController extends Controller
         return view('inicio', compact('centros'));
     }
 
-    public function mostrarCentro($slug)
-    {
-        // Buscar el centro comparando el slug generado
-        $centro = Centrosturist::with([
-            'actividadturist',
-            'guiasturist.actividadturist'
-        ])
-        ->get()
-        ->first(function ($item) use ($slug) {
-            return Str::slug($item->nomcentur) === $slug;
-        });
+    public function mostrarCentro($nombre)
+{
+    $centros = Centrosturist::all();
 
-        // Si no existe
-        if (!$centro) {
-            abort(404);
-        }
+    $centro = Centrosturist::with([
+        'actividadturist',
+        'guiasturist.actividadturist'
+    ])
+    ->get()
+    ->first(function ($item) use ($nombre) {
+        return Str::slug($item->nomcentur) === $nombre;
+    });
 
-        $centros = Centrosturist::all();
-
-        // La vista tendrá el mismo nombre del slug
-        $vista = $slug;
-
-        return view($vista, [
-            'centros' => $centros,
-            'centro' => $centro,
-            'guias' => $centro->guiasturist
-        ]);
+    if (!$centro) {
+        abort(404);
     }
+
+    $vista = $nombre;
+
+    return view($vista, [
+        'centros' => $centros,
+        'centro' => $centro,
+        'guias' => $centro->guiasturist
+    ]);
+}
 }
