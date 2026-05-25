@@ -26,62 +26,66 @@ public function inicio(){
     return view('inicio', compact('centros'));
 }
 
-public function mostrarCentro()
+public function mostrarCentro($id = null)
 {
-    // Mapeo de rutas a IDs
-    $mapa = [
-        'apompal' => 1,
-        'arrecifes' => 2,
-        'benitojuarez' => 3,
-        'cabanasencantadas' => 4,
-        'cascadasencantadas' => 5,
-        'ceytaks' => 6,
-        'elmirador' => 7,
-        'jomxuk' => 8,
-        'kantasejkan' => 9,
-        'lagunadelostion' => 10,
-        'lasmargaritas' => 11,
-        'manglaressontecomapan' => 12,
-        'ranchodonaelia' => 13,
-        'rocapartida' => 14,
-        'selvaelmarinero' => 15,
-    ];
+    // Detectamos qué ruta se está usando
+    if (request()->routeIs('apompal')) {
+        $id = 1;
+        $vista = 'apompal';
+    } elseif (request()->routeIs('arrecifes')) {
+        $id = 2;
+        $vista = 'arrecifes';
+    } elseif (request()->routeIs('benitojuarez')) {
+        $id = 3;
+        $vista = 'benitojuarez';
+    } elseif (request()->routeIs('cabanasencantadas')) {
+        $id = 4;
+        $vista = 'cabanasencantadas';
+    } elseif (request()->routeIs('cascadasencantadas')) {
+        $id = 5;
+        $vista = 'cascadasencantadas';
+    } elseif (request()->routeIs('ceytaks')) {
+        $id = 6;
+        $vista = 'ceytaks';
+    } elseif (request()->routeIs('elmirador')) {
+        $id = 7;
+        $vista = 'elmirador';
+    } elseif (request()->routeIs('jomxuk')) {
+        $id = 8;
+        $vista = 'jomxuk';
+    } elseif (request()->routeIs('kantasejkan')) {
+        $id = 9;
+        $vista = 'kantasejkan';
+    } elseif (request()->routeIs('lagunadelostion')) {
+        $id = 10;
+        $vista = 'lagunadelostion';
+    } elseif (request()->routeIs('lasmargaritas')) {
+        $id = 11;
+        $vista = 'lasmargaritas';
+    } elseif (request()->routeIs('manglaressontecomapan')) {
+        $id = 12;
+        $vista = 'manglaressontecomapan';
+    } elseif (request()->routeIs('ranchodonaelia')) {
+        $id = 13;
+        $vista = 'ranchodonaelia';
+    } elseif (request()->routeIs('rocapartida')) {
+        $id = 14;
+        $vista = 'rocapartida';
+    } elseif (request()->routeIs('selvaelmarinero')) {
+        $id = 15;
+        $vista = 'selvaelmarinero';
+    } 
 
-    $ruta = request()->route()->getName();
-
-    // 🔴 SI la ruta no existe en el mapa → no revienta
-    if (!isset($mapa[$ruta])) {
-        return redirect('/')
-            ->with('error', 'Centro no encontrado');
-    }
-
-    $id = $mapa[$ruta];
-
-    // 🔴 evitar crash si el centro fue eliminado
-    $centro = Centrosturist::with([
-        'actividadturist',
-        'guiasturist.actividadturist'
-    ])->where('idcentur', $id)->first();
-
-    if (!$centro) {
-        return redirect('/')
-            ->with('error', 'Este centro ya no está disponible');
-    }
-
+    // colección completa
     $centros = Centrosturist::all();
+
+    // centro específico con actividades
     $centro = Centrosturist::with('actividadturist')->findOrFail($id);
+
+    // centro específico con actividades
     $guias = Centrosturist::with('guiasturist.actividadturist')->findOrFail($id);    // $centro = Centrosturist::with('guiasturist')->findOrFail($id);
-
-     // Determinar la vista a cargar
-    $vista = $ruta; // asumiendo que la vista tiene el mismo nombre que
-
-    // 🔴 seguridad extra: la vista puede no existir
-    if (!view()->exists($ruta)) {
-        return view('inicio', compact('centros'))
-            ->with('error', 'Vista no encontrada');
-    }
-
     return view($vista, compact('centros', 'centro', 'guias' ));
 }
+
 
 }
