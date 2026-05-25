@@ -26,9 +26,9 @@ public function inicio(){
     return view('inicio', compact('centros'));
 }
 
-public function mostrarCentro($id = null)
+public function mostrarCentro()
 {
-    // Detectamos qué ruta se está usando
+    // Mapeo de rutas a IDs
     $mapa = [
         'apompal' => 1,
         'arrecifes' => 2,
@@ -49,36 +49,38 @@ public function mostrarCentro($id = null)
 
     $ruta = request()->route()->getName();
 
+    // 🔴 SI la ruta no existe en el mapa → no revienta
     if (!isset($mapa[$ruta])) {
-        abort(404);
+        return redirect('/')
+            ->with('error', 'Centro no encontrado');
     }
 
     $id = $mapa[$ruta];
-    $vista = $ruta;
 
-    // 👇 NO romper si el centro ya no existe
+    // 🔴 evitar crash si el centro fue eliminado
     $centro = Centrosturist::with([
         'actividadturist',
         'guiasturist.actividadturist'
-    ])->find($id);
+    ])->where('idcentur', $id)->first();
 
     if (!$centro) {
-        // puedes mostrar página vacía o error controlado
-        return view('errors.centro-eliminado', [
-            'centros' => Centrosturist::all()
-        ]);
+        return redirect('/')
+            ->with('error', 'Este centro ya no está disponible');
     }
 
-    // colección completa
-    $centros = Centrosturist::all();
+$centro = Centrosturist::with('actividadturist')->find($id);
 
-    // centro específico con actividades
-    $centro = Centrosturist::with('actividadturist')->findOrFail($id);
+$guias = Centrosturist::with('guiasturist.actividadturist')->find($id);
 
-    // centro específico con actividades
-    $guias = Centrosturist::with('guiasturist.actividadturist')->findOrFail($id);    // $centro = Centrosturist::with('guiasturist')->findOrFail($id);
-    return view($vista, compact('centros', 'centro', 'guias' ));
+if (!$centro) {
+    return redirect('/')
+        ->with('error', 'Este centro ya no existe');
 }
 
+return view($vista, compact('centros', 'centro', 'guias'));
+}
+$centros = Centrosturist::all();
+
+   
 
 }
