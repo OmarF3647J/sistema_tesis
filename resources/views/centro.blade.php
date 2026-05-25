@@ -64,7 +64,7 @@
 
 <!---bounce left--->
 <div class="wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.1s">
-  <div class="descripcion_centros">{{ $centros[0]->descentur }}</div>
+  <div class="descripcion_centros">{{ $centro->descentur }}</div>
 </div><!-- end boounce -->
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d92285.01114344833!2d-95.03807575195312!3d18.390496232442405!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x85c20b8fbe48d4c1%3A0x9c3f122a1576601!2sCatemaco%2C%20Ver.!3m2!1d18.4212621!2d-95.1129658!4m5!1s0x85e9dd415145f455%3A0x81772a66d9bc8eed!2sCentro%20Ecotur%C3%ADstico%20El%20Apompal%20Ejido%20Miguel%20Hidalgo%2095873%20Catemaco%2C%20Ver.!3m2!1d18.372275899999998!2d-94.9543631!5e1!3m2!1ses!2smx!4v1764219314835!5m2!1ses!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -83,28 +83,28 @@
           <img src="{{ asset('images/favicon/reloj.png') }}" alt="Horaio" class="icon" loading="lazy">
           <div>
               <div class="texto_contacto">Horario de Atención</div>
-              <p>{{ $centros->horcentur }}</p>
+              <p>{{ $centro->horcentur }}</p>
           </div>
       </div>
       <div class="contacto-item">
           <img src="{{ asset('images/favicon/responsable.png') }}" alt="Responsable" class="icon" loading="lazy">
           <div>
               <div class="texto_contacto">Responsable</div>
-              <p>{{ $centros->rescentur }}</p>
+              <p>{{ $centro->rescentur }}</p>
           </div>
       </div>
       <div class="contacto-item">
           <img src="{{ asset('images/favicon/correo_sinfondo.png') }}" alt="Correo electronico" class="icon" loading="lazy">
           <div>
               <div class="texto_contacto">Correo Electrónico</div>
-              <p>{{ $centros->corcentur }}</p>
+              <p>{{ $centro->corcentur }}</p>
           </div>
       </div>
       <div class="contacto-item">
           <img src="{{ asset('images/favicon/llamada.png') }}" alt="Telefono" class="icon" loading="lazy">
           <div>
               <div class="texto_contacto">Teléfono</div>
-              <p>+ 52 {{ $centros->telcentur }}</p>
+              <p>+ 52 {{ $centro->telcentur }}</p>
           </div>
       </div>
   </div>
@@ -203,7 +203,7 @@
 
 
 <div class="mascotas">
-  Este establecimiento <b>{{ $centros[0]->activo }}</b> acepta mascotas
+  Este establecimiento <b>{{ $centro->activo }}</b> acepta mascotas
 </div>
 
 
