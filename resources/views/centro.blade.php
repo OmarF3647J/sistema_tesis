@@ -328,14 +328,14 @@
 <br>
 
 
-@php
+<!-- @php
     $visitas = contador(); 
 @endphp
 
 
 <p style="text-align: center;">
     Esta página ha sido visitada {{ $visitas }} veces.
-</p>
+</p> -->
 
 
 @include('partials.footer')
