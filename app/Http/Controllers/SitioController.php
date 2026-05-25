@@ -21,27 +21,11 @@ class SitioController extends Controller
     }
 
     public function mostrarCentro($id)
-    {
-        $centro = Centrosturist::with([
-    'producto',
-    'actividadturist',
-    'guiasturist.actividadturist',
-    'serviciosturist'
-])
-->where('idcentur', $id)
-->first();
+{
+    dd($id);
 
-        // Si no existe o fue eliminado
-        if (!$centro) {
-            abort(404);
-        }
+    $centro = Centrosturist::where('idcentur', $id)->first();
 
-        $centros = Centrosturist::where('activo', 'Si')->get();
-
-        return view('centro', [
-            'centros' => $centros,
-            'centro' => $centro,
-            'guias' => $centro->guiasturist
-        ]);
-    }
+    dd($centro);
+}
 }
