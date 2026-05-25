@@ -779,10 +779,6 @@
           <h3>TRIBU WOUNAAN</h3>
         </div>
 
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -872,7 +868,7 @@
 
 <br>
 <!------------------------ wsp icon -------------------------->
-<a href="https://wa.me/5212941016169?text=Hola, me gustaría saber más acerca del Turismo Comunitario">
+<a href="https://wa.me/5212941016169?text=Hola, me gustaría saber   más acerca del Turismo Comunitario">
   <div id="wsp" title="Whatsapp">
     <img src="{{ asset('images/favicon/whatsapp.png') }}" width="60px">
   </div>
