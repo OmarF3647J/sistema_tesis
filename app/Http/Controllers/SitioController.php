@@ -13,19 +13,33 @@ class SitioController extends Controller
             'actividadturist',
             'guiasturist',
             'serviciosturist'
-        ])
-        ->where('activo', 'Si')
-        ->get();
+        ])->get();
 
         return view('inicio', compact('centros'));
     }
 
     public function mostrarCentro($id)
-{
-    dd($id);
+    {
+        $centro = Centrosturist::with([
+            'producto',
+            'actividadturist',
+            'guiasturist.actividadturist',
+            'serviciosturist'
+        ])
+        ->where('idcentur', $id)
+        ->first();
 
-    $centro = Centrosturist::where('idcentur', $id)->first();
+        // Si no existe
+        if (!$centro) {
+            abort(404);
+        }
 
-    dd($centro);
-}
+        $centros = Centrosturist::all();
+
+        return view('centro', [
+            'centros' => $centros,
+            'centro' => $centro,
+            'guias' => $centro->guiasturist
+        ]);
+    }
 }
