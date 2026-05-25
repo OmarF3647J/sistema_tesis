@@ -67,41 +67,154 @@
 <!---carrusel carreras--->
 <div class="carrusel_carreras js-flickity"
   data-flickity-options='{
-    "cellAlign": "left",
-    "contain": true,
-    "wrapAround": true,
-    "autoPlay": 5000,
-    "pauseAutoPlayOnHover": false,
-    "prevNextButtons": true,
-    "selectedAttraction": 0.01,
-    "friction": 0.2
-  }'>
+    "cellAlign": "left", 
+    "contain": true, 
+    "wrapAround": true, 
+    "autoPlay": 5000, 
+    "pauseAutoPlayOnHover": false, 
+    "prevNextButtons": true, 
+    "selectedAttraction": 0.01, 
+    "friction": 0.2 
+  }'> 
 
-@foreach($centros as $centro)
-
+  
   <div class="carrusel_portadas">
-
-    <a href="{{ route('centro.mostrar', $centro->idcentur) }}">
-
-      <img src="{{ asset('images/noimage.jpg') }}">
-
-      <div class="titulo_carrera_telefono">
-        {{ $centro->nomcentur }}
-      </div>
-
+    <a href="{{ route('apompal') }}">
+      <img src="{{ asset('images/apompal/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[1]->nomcentur }}</div>
       <br>
-
-      <button class="btn-sobre-imagen">
-        Conocer más...
-      </button>
-
+      <button class="btn-sobre-imagen">Conocer más...</button>
     </a>
-
   </div>
 
-@endforeach
+  <div class="carrusel_portadas">
+    <a href="{{ route('arrecifes') }}">
+      <img src="{{ asset('images/arrecifes/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[2]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
 
-</div>
+  <div class="carrusel_portadas">
+    <a href="{{ route('benitojuarez') }}">
+      <img src="{{ asset('images/benito-juarez/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[3]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+  
+  <div class="carrusel_portadas">
+    <a href="{{ route('cabanasencantadas') }}">
+      <img src="{{ asset('images/cabanas-encantadas/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[4]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="{{ route('cascadasencantadas') }}">
+      <img src="{{ asset('images/cascadas-encantadas/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[5]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+ 
+ <div class="carrusel_portadas">
+    <a href="{{ route('ceytaks') }}">
+      <img src="{{ asset('images/noimage.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[6]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+
+ <div class="carrusel_portadas">
+    <a href="{{ route('elmirador') }}">
+      <img src="{{ asset('images/noimage.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[7]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="{{ route('jomxuk') }}">
+      <img src="{{ asset('images/jomxuk/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[8]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="{{ route('kantasejkan') }}">
+      <img src="{{ asset('images/kan-tasejkan/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[9]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="{{ route('lagunadelostion') }}">
+      <img src="{{ asset('images/laguna-del-ostion/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[10]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="{{ route('lasmargaritas') }}">
+      <img src="{{ asset('images/las-margaritas/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[11]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="{{ route('manglaressontecomapan') }}">
+      <img src="{{ asset('images/manglares-sontecomapan/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[12]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="{{ route('ranchodonaelia') }}">
+      <img src="{{ asset('images/rancho-dona-elia/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[13]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+
+  <div class="carrusel_portadas">
+    <a href="{{ route('rocapartida') }}">
+      <img src="{{ asset('images/roca-partida/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[14]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+
+ <div class="carrusel_portadas">
+    <a href="{{ route('selvaelmarinero') }}">
+      <img src="{{ asset('images/selva-el-marinero/portada.jpg') }}">
+      <div class="titulo_carrera_telefono">{{ $centros[15]->nomcentur }}</div>
+      <br>
+      <button class="btn-sobre-imagen">Conocer más...</button>
+    </a>
+  </div>
+
+</div><!---fin carrusel--->
+<div class="flickity-page-dots"></div>
 <!---fin carrusel--->
 
 
@@ -150,21 +263,99 @@
 <!--inicio agrupador centros turitticos -->
 <div class="agrupador-centros-turisticos">
 
-@foreach($centros as $centro)
+  <a href="{{ route('apompal') }}">
+      <div class="grid-item" style="background-image: url('{{ asset('images/apompal/portada.jpg') }}');">
+          <h3>{{ $centros[1]->nomcentur }}</h3>
+      </div>
+  </a>
 
-    <a href="{{ route('centro.mostrar', $centro->idcentur) }}">
+  
+  <a href="{{ route('arrecifes') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/arrecifes/portada.jpg') }}');">
+        <h3>{{ $centros[2]->nomcentur }}</h3>
+    </div>
+  </a>
 
-        <div class="grid-item"
-             style="background-image: url('{{ asset('images/noimage.jpg') }}');">
+  <a href="{{ route('benitojuarez') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/benito-juarez/portada.jpg') }}');">
+        <h3>{{ $centros[3]->nomcentur }}</h3>
+    </div>  
+  </a>
+    
+  <a href="{{ route('cabanasencantadas') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/cabanas-encantadas/portada.jpg') }}');">
+        <h3>{{ $centros[4]->nomcentur }}</h3>
+    </div>
+  </a>
 
-            <h3>{{ $centro->nomcentur }}</h3>
+  <a href="{{ route('cascadasencantadas') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/cascadas-encantadas/portada.jpg') }}');">
+        <h3>{{ $centros[5]->nomcentur }}</h3>
+    </div>
+  </a>
 
-        </div>
+  <a href="{{ route('ceytaks') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/noimage.jpg') }}');">
+        <h3>{{ $centros[6]->nomcentur }}</h3>
+    </div>
+  </a>
 
-    </a>
+  <a href="{{ route('elmirador') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/noimage.jpg') }}');">
+        <h3>{{ $centros[7]->nomcentur }}</h3>
+    </div>
+  </a>
 
-@endforeach
+  <a href="{{ route('jomxuk') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/jomxuk/portada.jpg') }}');">
+        <h3>{{ $centros[8]->nomcentur }}</h3>
+    </div>
+  </a>
 
+
+  <a href="{{ route('kantasejkan') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/kan-tasejkan/portada.jpg') }}');">
+        <h3>{{ $centros[9]->nomcentur }}</h3>
+    </div>
+  </a>
+
+
+  <a href="{{ route('lagunadelostion') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/laguna-del-ostion/portada.jpg') }}');">
+        <h3>{{ $centros[10]->nomcentur }}</h3>
+    </div>
+  </a>
+
+  <a href="{{ route('lasmargaritas') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/las-margaritas/portada.jpg') }}');">
+        <h3>{{ $centros[11]->nomcentur }}</h3>
+    </div>
+  </a>
+
+  <a href="{{ route('manglaressontecomapan') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/manglares-sontecomapan/portada.jpg') }}');">
+        <h3>{{ $centros[12]->nomcentur }}</h3>
+    </div>
+  </a>
+
+  <a href="{{ route('ranchodonaelia') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/rancho-dona-elia/portada.jpg') }}');">
+        <h3>{{ $centros[13]->nomcentur }}</h3>
+    </div>
+  </a>
+
+  <a href="{{ route('rocapartida') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/roca-partida/portada.jpg') }}');">
+        <h3>{{ $centros[14]->nomcentur }}</h3>
+    </div>
+  </a>
+
+  <a href="{{ route('selvaelmarinero') }}">
+    <div class="grid-item" style="background-image: url('{{ asset('images/selva-el-marinero/portada.jpg') }}');">
+        <h3>{{ $centros[15]->nomcentur }}</h3>
+    </div>
+  </a>
+    
 </div>
 
 

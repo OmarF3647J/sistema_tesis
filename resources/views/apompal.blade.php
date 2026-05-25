@@ -260,6 +260,9 @@
 </div>
 
 
+
+
+
 <br><br><br><br><br>
 
 
@@ -269,7 +272,6 @@
 <div class="wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.1s">
   <div class="descripcion_guias"> Estas guías colaboran con este Centro Ecoturistico, pueden <b>llevarte</b> a este lugar y pueden ofrecerte algunas <b>actividades para que disfrutes de tu estancia... </b><br><br>¡Ponte en contacto con ellos y disfruta tu viaje!</div>
 </div>
-
 <div class="agrupador-guias-turisticas">
     @foreach($centro->guiasturist as $agencia)
     <div class="agrupador-itemgt-y-tarjeta">
