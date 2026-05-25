@@ -31,21 +31,21 @@ Route::get('/centro/{id}', [SitioController::class, 'centro'])->name('centro.mos
 |--------------------------------------------------------------------------
 */
 
-Route::get('/apompal', [SitioController::class, 'mostrarCentro'])->name('apompal');
-Route::get('/arrecifes', [SitioController::class, 'mostrarCentro'])->name('arrecifes');
-Route::get('/benitojuarez', [SitioController::class, 'mostrarCentro'])->name('benitojuarez');
-Route::get('/cabanasencantadas', [SitioController::class, 'mostrarCentro'])->name('cabanasencantadas');
-Route::get('/cascadasencantadas', [SitioController::class, 'mostrarCentro'])->name('cascadasencantadas');
-Route::get('/ceytaks', [SitioController::class, 'mostrarCentro'])->name('ceytaks');
-Route::get('/elmirador', [SitioController::class, 'mostrarCentro'])->name('elmirador');
-Route::get('/jomxuk', [SitioController::class, 'mostrarCentro'])->name('jomxuk');
-Route::get('/kantasejkan', [SitioController::class, 'mostrarCentro'])->name('kantasejkan');
-Route::get('/lagunadelostion', [SitioController::class, 'mostrarCentro'])->name('lagunadelostion');
-Route::get('/lasmargaritas', [SitioController::class, 'mostrarCentro'])->name('lasmargaritas');
-Route::get('/manglaressontecomapan', [SitioController::class, 'mostrarCentro'])->name('manglaressontecomapan');
-Route::get('/ranchodonaelia', [SitioController::class, 'mostrarCentro'])->name('ranchodonaelia');
-Route::get('/rocapartida', [SitioController::class, 'mostrarCentro'])->name('rocapartida');
-Route::get('/selvaelmarinero', [SitioController::class, 'mostrarCentro'])->name('selvaelmarinero');
+// Route::get('/apompal', [SitioController::class, 'mostrarCentro'])->name('apompal');
+// Route::get('/arrecifes', [SitioController::class, 'mostrarCentro'])->name('arrecifes');
+// Route::get('/benitojuarez', [SitioController::class, 'mostrarCentro'])->name('benitojuarez');
+// Route::get('/cabanasencantadas', [SitioController::class, 'mostrarCentro'])->name('cabanasencantadas');
+// Route::get('/cascadasencantadas', [SitioController::class, 'mostrarCentro'])->name('cascadasencantadas');
+// Route::get('/ceytaks', [SitioController::class, 'mostrarCentro'])->name('ceytaks');
+// Route::get('/elmirador', [SitioController::class, 'mostrarCentro'])->name('elmirador');
+// Route::get('/jomxuk', [SitioController::class, 'mostrarCentro'])->name('jomxuk');
+// Route::get('/kantasejkan', [SitioController::class, 'mostrarCentro'])->name('kantasejkan');
+// Route::get('/lagunadelostion', [SitioController::class, 'mostrarCentro'])->name('lagunadelostion');
+// Route::get('/lasmargaritas', [SitioController::class, 'mostrarCentro'])->name('lasmargaritas');
+// Route::get('/manglaressontecomapan', [SitioController::class, 'mostrarCentro'])->name('manglaressontecomapan');
+// Route::get('/ranchodonaelia', [SitioController::class, 'mostrarCentro'])->name('ranchodonaelia');
+// Route::get('/rocapartida', [SitioController::class, 'mostrarCentro'])->name('rocapartida');
+// Route::get('/selvaelmarinero', [SitioController::class, 'mostrarCentro'])->name('selvaelmarinero');
 
 Route::get('/register', function () {
     return Inertia::render('Auth/Register');
