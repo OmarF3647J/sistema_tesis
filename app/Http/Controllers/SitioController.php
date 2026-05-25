@@ -23,14 +23,13 @@ class SitioController extends Controller
     public function mostrarCentro($id)
     {
         $centro = Centrosturist::with([
-            'producto',
-            'actividadturist',
-            'guiasturist.actividadturist',
-            'serviciosturist'
-        ])
-        ->where('activo', 'Si')
-        ->where('idcentur', $id)
-        ->first();
+    'producto',
+    'actividadturist',
+    'guiasturist.actividadturist',
+    'serviciosturist'
+])
+->where('idcentur', $id)
+->first();
 
         // Si no existe o fue eliminado
         if (!$centro) {
