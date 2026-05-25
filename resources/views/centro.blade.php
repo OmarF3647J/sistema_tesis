@@ -7,10 +7,11 @@
   <meta name="description" content="Descubre el turismo comunitario en la región de Los Tuxtlas, Veracruz. Vive experiencias únicas en centros ecoturísticos como Lago El Apompal, Roca Partida, Benito Juárez, Las Margaritas, Laguna del Ostión y más destinos naturales.">
   <meta name="keywords" content="ecoturismo los tuxtlas, ecoturismo en los tuxtlas, ecoturismo en la región de los Tuxtlas, centros ecoturisticos en los tuxtlas, centros ecoturisticos en la región de los tuxtlas, turismo comunitario de los tuxtlas, Los Tuxtlas Veracruz, que visitar en los Tuxtlas, que visitar en la región de los Tuxtlas, ecoturismo, Apompal, Roca Partida, Benito Juárez, Arrecifes, Cabañas Encantadas, Kan Tasejkan, Laguna del Ostión, Las Margaritas, naturaleza de los tuxtlas, aventura, cascadas, playas, senderismo, ">
 
-  <link rel="preload" as="image" href="{{ asset('images/las-margaritas/portada.jpg') }}">
-  <link rel="preload" as="image" href="{{ asset('images/las-margaritas/1.jpg') }}">
-  <link rel="preload" as="image" href="{{ asset('images/las-margaritas/2.jpg') }}">
-  <link rel="preload" as="image" href="{{ asset('images/las-margaritas/3.jpg') }}">
+
+  <link rel="preload" as="image" href="{{ asset('images/apompal/portada.jpg') }}">
+  <link rel="preload" as="image" href="{{ asset('images/apompal/4.jpg') }}">
+  <link rel="preload" as="image" href="{{ asset('images/apompal/2.jpg') }}">
+  <link rel="preload" as="image" href="{{ asset('images/apompal/1.jpg') }}">
   
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,13 +40,12 @@
   <!-- Icono pestaña -->
   <link rel="icon" href="{{ asset('images/favicon/tecnm.ico') }}"/>
   <!-- Titulo pestaña -->
-  <title>Las Margaritas – ¡Conoce este Centro Ecoturístico!</title>
+<title>{{ $centro->nomcentur }} – ¡Conoce este Centro Ecoturístico!</title>
 
 </head>
 
 
 <body>
-
 
 
 @include('partials.header')
@@ -54,9 +54,9 @@
 
 
 
-<div class="imagen_full" style="background-image: url('{{ asset('images/las-margaritas/portada.jpg') }}');">
+<div class="imagen_full" style="background-image: url('{{ asset('images/apompal/portada.jpg') }}');">
       <div class="texto-sobre-full">
-        @include('partials.title-lasmargaritas')
+<h1>{{ $centro->nomcentur }}</h1>
       </div>
 </div>
 
@@ -64,11 +64,10 @@
 
 <!---bounce left--->
 <div class="wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.1s">
-  <div class="descripcion_centros">{{ $centros[10]->descentur }}</div>
-  <!-- <div class="descripcion_centros"> Breve descripción que el reponsable quiera contar sobre su centro ecoturístico, en que comunidad se ubica el centro turístico y a cuántos km está ubicado desde un punto de referencia conocido. O también puede escribir porqué es tan mítico este lugar.</b></div> -->
+  <div class="descripcion_centros">{{ $centro->descentur }}</div>
 </div><!-- end boounce -->
-<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d46818.31915945248!2d-95.05950477625245!3d18.39747428382238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x85c20b8fbe48d4c1%3A0x9c3f122a1576601!2sCatemaco%2C%20Ver.!3m2!1d18.4212621!2d-95.1129658!4m5!1s0x85e9dfde46017857%3A0xa1717ee292da7db4!2sLas%20Margaritas%20Ecoturismo%2C%20Unnamed%20Road%2C%20Ver.!3m2!1d18.3649386!2d-95.03746799999999!5e1!3m2!1ses!2smx!4v1763343881227!5m2!1ses!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+<iframe src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d92285.01114344833!2d-95.03807575195312!3d18.390496232442405!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x85c20b8fbe48d4c1%3A0x9c3f122a1576601!2sCatemaco%2C%20Ver.!3m2!1d18.4212621!2d-95.1129658!4m5!1s0x85e9dd415145f455%3A0x81772a66d9bc8eed!2sCentro%20Ecotur%C3%ADstico%20El%20Apompal%20Ejido%20Miguel%20Hidalgo%2095873%20Catemaco%2C%20Ver.!3m2!1d18.372275899999998!2d-94.9543631!5e1!3m2!1ses!2smx!4v1764219314835!5m2!1ses!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 <br>
 
 <!--appear scroll-->
@@ -84,28 +83,28 @@
           <img src="{{ asset('images/favicon/reloj.png') }}" alt="Horaio" class="icon" loading="lazy">
           <div>
               <div class="texto_contacto">Horario de Atención</div>
-              <p>{{ $centros[10]->horcentur }}</p>
+              <p>{{ $centro->horcentur }}</p>
           </div>
       </div>
       <div class="contacto-item">
           <img src="{{ asset('images/favicon/responsable.png') }}" alt="Responsable" class="icon" loading="lazy">
           <div>
               <div class="texto_contacto">Responsable</div>
-              <p>{{ $centros[10]->rescentur }}</p>
+              <p>{{ $centro->rescentur }}</p>
           </div>
       </div>
       <div class="contacto-item">
           <img src="{{ asset('images/favicon/correo_sinfondo.png') }}" alt="Correo electronico" class="icon" loading="lazy">
           <div>
               <div class="texto_contacto">Correo Electrónico</div>
-              <p>{{ $centros[10]->corcentur }}</p>
+              <p>{{ $centro->corcentur }}</p>
           </div>
       </div>
       <div class="contacto-item">
           <img src="{{ asset('images/favicon/llamada.png') }}" alt="Telefono" class="icon" loading="lazy">
           <div>
               <div class="texto_contacto">Teléfono</div>
-              <p>+ 52 {{ $centros[10]->telcentur }}</p>
+              <p>+ 52 {{ $centro->telcentur }}</p>
           </div>
       </div>
   </div>
@@ -131,8 +130,10 @@
   <h2>Servicios</h2>
 </div>
 
-<br>
 
+
+
+<br>
 <!--Servicios -->
 <div class="contenedor-docentes">
   <div class="docentes">   
@@ -198,12 +199,18 @@
     </div>
   </div>
 </div>
+
+
+
 <div class="mascotas">
-  Este establecimiento <b>{{ $centros[10]->activo }}</b> acepta mascotas
+  Este establecimiento <b>{{ $centro->activo }}</b> acepta mascotas
 </div>
 
 
 <br><br>
+
+<!-- <pre>{{ var_export(isset($centro) ? $centro->actividadturist->toArray() : 'NO HAY $centro', true) }}</pre> -->
+
 
 <div class="titulo-actividades">
   ¿Qué actividades puedes realizar?
@@ -217,47 +224,53 @@
       @endforeach
     </ul>
   @else
-    <p>No hay actividades registradas para este centro (id = 9).</p>
+    <p>No hay actividades registradas para este centro (id = 1).</p>
   @endif
 </div>
+
+
+
+
+
 
 
 
 <br><br><br><br><br>
 
 <h2>Galería</h2>
+<br>
 <div class="carousel-container-l">
   
-    <div class="main-image-l">
-        <img id="featured-laboratorio">
-    </div>
+  <div class="main-image-l">
+      <img id="featured-laboratorio">
+  </div>
 
 
-      <!-- Modal para ampliar -->
-    <div id="modalImagen" class="iframe-modal-img">
-      <img id="imagenAmpliada" src="" alt="Vista ampliada">
-    </div>
+  <!-- Modal para ampliar -->
+  <div id="modalImagen" class="iframe-modal-img">
+    <img id="imagenAmpliada" src="" alt="Vista ampliada">
+  </div>
 
     
-    <div class="thumbnails-l" id="laboratorio-thumbnails">
-        <!-- Las imágenes se añaden dinámicamente -->
-    </div>
+  <div class="thumbnails-l" id="laboratorio-thumbnails">
+    <!-- Las imágenes se añaden dinámicamente -->
+  </div>
+
 </div>
 
+
+
+
+
 <br><br><br><br><br>
-
-
 
 
 <div class="titulo-guias">
   Guías Turísticas Certificadas
 </div>
-
 <div class="wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.1s">
   <div class="descripcion_guias"> Estas guías colaboran con este Centro Ecoturistico, pueden <b>llevarte</b> a este lugar y pueden ofrecerte algunas <b>actividades para que disfrutes de tu estancia... </b><br><br>¡Ponte en contacto con ellos y disfruta tu viaje!</div>
 </div>
-
-
 <div class="agrupador-guias-turisticas">
     @foreach($centro->guiasturist as $agencia)
     <div class="agrupador-itemgt-y-tarjeta">
@@ -302,36 +315,6 @@
     @endforeach
 </div>
 
-<!--
-<div class="titulo_opinion_turistas">
-  ¿Qué dicen los turistas?
-</div>
-<center><h3>¡Las personas aman esta región!</h3></center>
-
-<div class="agrupador_opinion">
-
-  <div class="opinion_turista">
-    <div class="bloque bloque-1">"Me encantó el lugar pude realizar senderismo, nadar en una cascada y hospedarme con una gran anfitriona Sra. Amelia y su hija Marisela. Una cabaña junto a un estanque."</div>
-    <div class="bloque bloque-2">★★★★</div>
-    <div class="bloque bloque-3">-Anónimo</div>
-  </div>
-
-  <div class="opinion_turista">
-    <div class="bloque bloque-1">"Se trata de un lugar hermoso, muestra perfecta de como la Naturaleza y el hombre pueden convivir en una sinergia equilibrada"</div>
-    <div class="bloque bloque-2">★★★★★</div>
-    <div class="bloque bloque-3">-Visitante Mexicano</div>
-  </div>
-
-  <div class="opinion_turista">
-    <div class="bloque bloque-1">"Excelente Lugar es una Maravilla Especialmente la Atención Al Turista"</div>
-    <div class="bloque bloque-2">★★★★★</div>
-    <div class="bloque bloque-3">-Anónimo</div>
-  </div>
-
-</div>
--->
-
-
 <br><br><br>
 
 
@@ -345,14 +328,14 @@
 <br>
 
 
-@php
+<!-- @php
     $visitas = contador(); 
 @endphp
 
 
 <p style="text-align: center;">
     Esta página ha sido visitada {{ $visitas }} veces.
-</p>
+</p> -->
 
 
 @include('partials.footer')
@@ -388,14 +371,12 @@
 <!--Galeria-->
 <script>
   const laboratorioImages = [
-    '{{ asset('images/las-margaritas/5.jpg') }}',
-    '{{ asset('images/las-margaritas/2.jpg') }}',
-    '{{ asset('images/las-margaritas/3.jpg') }}',
-    '{{ asset('images/las-margaritas/portada.jpg') }}',
-    '{{ asset('images/las-margaritas/4.jpg') }}',
-    '{{ asset('images/las-margaritas/1.jpg') }}',
-    '{{ asset('images/las-margaritas/6.jpg') }}',
-    '{{ asset('images/las-margaritas/7.jpg') }}'
+    '{{ asset('images/apompal/4.jpg') }}',
+    '{{ asset('images/apompal/2.jpg') }}',
+    '{{ asset('images/apompal/1.jpg') }}',
+    '{{ asset('images/apompal/portada.jpg') }}',
+    '{{ asset('images/apompal/5.jpg') }}',
+    '{{ asset('images/apompal/7.jpg') }}'
   ];
 
   // --- FUNCIÓN PRINCIPAL ---
