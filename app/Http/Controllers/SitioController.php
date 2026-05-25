@@ -20,7 +20,7 @@ class SitioController extends Controller
 
 
     // Mostrar centro dinámicamente
-    public function mostrarCentro($id)
+    public function centro($id)
     {
 
         // Obtener todos los centros
