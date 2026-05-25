@@ -29,7 +29,8 @@ class SitioController extends Controller
             'serviciosturist'
         ])
         ->where('activo', 'Si')
-        ->find($id);
+        ->where('idcentur', $id)
+        ->first();
 
         // Si no existe o fue eliminado
         if (!$centro) {

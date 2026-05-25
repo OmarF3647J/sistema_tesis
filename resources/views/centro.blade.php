@@ -56,7 +56,7 @@
 
 <div class="imagen_full" style="background-image: url('{{ asset('images/apompal/portada.jpg') }}');">
       <div class="texto-sobre-full">
-        @include('partials.title-apompal')
+<h1>{{ $centro->nomcentur }}</h1>
       </div>
 </div>
 
