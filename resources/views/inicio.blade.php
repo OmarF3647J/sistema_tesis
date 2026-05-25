@@ -375,92 +375,45 @@
 
 <!--inicio agrupador guias turisticas -->
 <div class="agrupador-guias-turisticas">
-
-  <!--
-  <div class="agrupador-itemgt-y-tarjeta">
-      <div class="grid-itemgt">
-        <img src="{{ asset('images/noimage.jpg') }}" loading="lazy">
-      </div>
-
-    <div class="tarjeta-guia">
-        
-      <div style="text-align: center;">
-        <h3>Ecoturismo el Apompal</h3>
-      </div>
-
-      <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-      <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-      <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-      <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
-  
-      <br>
-      
-      <div class="btn-redes-sociales">
-        <a href="https://facebook.com" target="_blank" class="cat">
-          <img src="{{ asset('images/favicon/facebook_circular.png') }}" alt="Facebook" loading="lazy">
-        </a>
-        <a href="https://instagram.com" target="_blank" class="cat">
-          <img src="{{ asset('images/favicon/ig.png') }}" alt="Instagram" loading="lazy">
-        </a>
-        <a href="https://tiktok.com" target="_blank" class="cat">
-          <img src="{{ asset('images/favicon/tiktok-circular.png') }}" alt="Tiktok" loading="lazy">
-        </a>
-      </div>
-
-    </div>
-  </div>
-  -->
-
-<div class="agrupador-guias-turisticas">
     @foreach($guiasT as $agencia)
     <div class="agrupador-itemgt-y-tarjeta">
-
         <div class="grid-itemgt">
             <img src="{{ asset($agencia->imgguiatur) }}"
                  alt="{{ $agencia->nomguiatur }}">
         </div>
-
         <div class="tarjeta-guia">
-
             <div style="text-align:center;">
                 <h3>{{ $agencia->nomguiatur }}</h3>
             </div>
-
             <h4>
                 Responsable:
                 <span style="font-weight:300;">
                     {{ $agencia->nomresguiatur }}
                 </span>
             </h4>
-
             <h4>
                 Número:
                 <span style="font-weight:300;">
                     {{ $agencia->telguiatur }}
                 </span>
             </h4>
-
             <h4>
                 Correo:
                 <span style="font-weight:300;">
                     {{ $agencia->corguiatur }}
                 </span>
             </h4>
-
-            <h4>
-                Actividades que realizan
-                <ul style="padding-left:20px; margin-top:5px;">
-                    @foreach($agencia->actividadturist as $actividad)
-                        <li style="font-weight:300; margin-bottom:8px;">
-                            {{ $actividad->nomacttur }}
-                        </li>
-                    @endforeach
-                </ul>
-            </h4>
-
-            <br>
+          <h4>Actividades que realizan
+            <ul style="padding-left:20px; margin-top:5px;">
+                @foreach($agencia->actividadturist as $actividad)
+                    <li style="font-weight:300; margin-bottom:8px;">
+                        {{ $actividad->nomacttur }}
+                    </li>
+                @endforeach
+            </ul>
+          </h4>
+          <br>
         </div>
-
     </div>
     @endforeach
 </div>
