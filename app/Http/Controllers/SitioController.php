@@ -79,7 +79,6 @@ if (!$centro) {
 
 return view($vista, compact('centros', 'centro', 'guias'));
 }
-$centros = Centrosturist::all();
 
    
 
