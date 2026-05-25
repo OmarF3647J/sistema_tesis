@@ -68,18 +68,20 @@ public function mostrarCentro()
             ->with('error', 'Este centro ya no está disponible');
     }
 
-$centro = Centrosturist::with('actividadturist')->find($id);
+    $centros = Centrosturist::all();
+    $centro = Centrosturist::with('actividadturist')->findOrFail($id);
+    $guias = Centrosturist::with('guiasturist.actividadturist')->findOrFail($id);    // $centro = Centrosturist::with('guiasturist')->findOrFail($id);
 
-$guias = Centrosturist::with('guiasturist.actividadturist')->find($id);
+     // Determinar la vista a cargar
+    $vista = $ruta; // asumiendo que la vista tiene el mismo nombre que
 
-if (!$centro) {
-    return redirect('/')
-        ->with('error', 'Este centro ya no existe');
+    // 🔴 seguridad extra: la vista puede no existir
+    if (!view()->exists($ruta)) {
+        return view('inicio', compact('centros'))
+            ->with('error', 'Vista no encontrada');
+    }
+
+    return view($vista, compact('centros', 'centro', 'guias' ));
 }
-
-return view($vista, compact('centros', 'centro', 'guias'));
-}
-
-   
 
 }
