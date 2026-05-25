@@ -422,11 +422,6 @@
           <h3>Degaaf Travel & Tours</h3>
         </div>
 
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque dignissimos consectetur, error fugiat soluta facilis molestiae.</span></h4>
-        
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -455,10 +450,7 @@
           <h3>EXPLORE CATEMACO</h3>
         </div>
 
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -481,10 +473,7 @@
         <div style="text-align: center;"> 
             <h3>Ixmatis</h3>
         </div>
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -511,10 +500,8 @@
         <div style="text-align: center;"> 
             <h3>José Elías Chagala Ramírez</h3>
         </div>
-        <h4>Responsable: <span style="font-weight: 300;">José Elías Chagala Ramírez</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realiza <span style="font-weight: 300;">bd</span></h4>
+
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -536,10 +523,8 @@
         <div style="text-align: center;"> 
           <h3>MinoLei Tours</h3>
         </div>
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -564,11 +549,11 @@
 
         <div style="text-align: center;"> 
           <h3>Natouralexa</h3>
+
         </div>
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
+
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -596,10 +581,9 @@
         <div style="text-align: center;"> 
           <h3>RIVER TOURS</h3>
         </div>
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
+
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -625,10 +609,10 @@
         <div style="text-align: center;"> 
           <h3>Riviera del Toro “Ecoturismo y Aventura”</h3>
         </div>
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
+
+
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -657,10 +641,10 @@
         <div style="text-align: center;"> 
           <h3>Roca Tour</h3>
         </div>
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
+
+
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -683,10 +667,8 @@
         <div style="text-align: center;">
           <h3>SELVA FIRME. Excursiones y Expediciones</h3>
         </div>
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
+
 
         <br>
         <!-- Contenedor de iconos 
@@ -717,10 +699,7 @@
           <h3>SPLIT ROCK</h3>
         </div>
 
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -750,10 +729,8 @@
           <h3>Grupo Temazcalli Xolotl</h3>
         </div>
 
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -777,10 +754,8 @@
           <h3>Tours Roca Partida Veracruz.</h3>
         </div>
 
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
@@ -830,10 +805,7 @@
           <h3>Turismo Sontecomapan</h3>
         </div>
 
-        <h4>Responsable: <span style="font-weight: 300;">Nombre</span> </h4>
-        <h4>Número: <span style="font-weight: 300;">bd</span></h4>
-        <h4>Correo: <span style="font-weight: 300;">bd</span></h4>   
-        <h4>Actividades que realizan <span style="font-weight: 300;">bd</span></h4>
+
         <br>
         <!-- Contenedor de iconos -->
         <div class="btn-redes-sociales">
