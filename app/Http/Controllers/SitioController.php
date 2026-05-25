@@ -25,11 +25,8 @@ class SitioController extends Controller
             'actividadturist',
             'guiasturist.actividadturist',
             'serviciosturist'
-        ])
-        ->where('idcentur', $id)
-        ->first();
+        ])->find($id);
 
-        // Si no existe
         if (!$centro) {
             abort(404);
         }
