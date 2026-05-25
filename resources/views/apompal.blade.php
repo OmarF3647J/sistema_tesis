@@ -260,97 +260,59 @@
 </div>
 
 
-
-
-
 <br><br><br><br><br>
 
 
 <div class="titulo-guias">
   Guías Turísticas Certificadas
 </div>
-
 <div class="wow animate__animated animate__fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.1s">
   <div class="descripcion_guias"> Estas guías colaboran con este Centro Ecoturistico, pueden <b>llevarte</b> a este lugar y pueden ofrecerte algunas <b>actividades para que disfrutes de tu estancia... </b><br><br>¡Ponte en contacto con ellos y disfruta tu viaje!</div>
 </div>
 
 <div class="agrupador-guias-turisticas">
-
     @foreach($centro->guiasturist as $agencia)
-
     <div class="agrupador-itemgt-y-tarjeta">
-
         <div class="grid-itemgt">
             <img src="{{ asset($agencia->imgguiatur) }}"
                  alt="{{ $agencia->nomguiatur }}">
         </div>
-
         <div class="tarjeta-guia">
-
             <div style="text-align:center;">
                 <h3>{{ $agencia->nomguiatur }}</h3>
             </div>
-
             <h4>
                 Responsable:
                 <span style="font-weight:300;">
                     {{ $agencia->nomresguiatur }}
                 </span>
             </h4>
-
             <h4>
                 Número:
                 <span style="font-weight:300;">
                     {{ $agencia->telguiatur }}
                 </span>
             </h4>
-
             <h4>
                 Correo:
                 <span style="font-weight:300;">
                     {{ $agencia->corguiatur }}
                 </span>
             </h4>
-
-            <!-- <ul class="list-disc ml-6 text-sm text-gray-800 space-y-1">
-
-        @foreach($agencia->actividadturist as $actividad)
-
-            <li style="font-weight: 300;">
-                {{ $actividad->nomacttur }}
-            </li>
-
-        @endforeach
-
-          </ul> -->
           <h4>Actividades que realizan
-           <ul style="padding-left:20px; margin-top:5px;">
-
-    @foreach($agencia->actividadturist as $actividad)
-
-        <li style="font-weight:300; margin-bottom:8px;">
-            {{ $actividad->nomacttur }}
-        </li>
-
-    @endforeach
-
-</ul>
-        </h4>
+            <ul style="padding-left:20px; margin-top:5px;">
+                @foreach($agencia->actividadturist as $actividad)
+                    <li style="font-weight:300; margin-bottom:8px;">
+                        {{ $actividad->nomacttur }}
+                    </li>
+                @endforeach
+            </ul>
+          </h4>
           <br>
-
-          
-
-
         </div>
-
     </div>
-
     @endforeach
-
 </div>
-
-
-
 
 <br><br><br>
 
