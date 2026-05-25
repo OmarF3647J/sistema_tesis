@@ -22,8 +22,9 @@ Route::get('/dashboard', function () {//nombre la ruta como dashboard porque sin
 Route::get('/', [SitioController::class, 'inicio'])->name('inicio');//le quité turismocomunitario
 
 
-Route::get('/centro/{id}', [SitioController::class, 'centro'])->name('centro.mostrar');
-
+// Route::get('/centro/{id}', [SitioController::class, 'centro'])->name('centro.mostrar');
+Route::get('/centro/{id}/{nombre?}', [SitioController::class, 'centro'])
+    ->name('centro.mostrar');
 
 /*
 |--------------------------------------------------------------------------
