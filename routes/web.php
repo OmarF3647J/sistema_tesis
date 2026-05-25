@@ -10,32 +10,46 @@ use App\Http\Controllers\CentrosturistController;
 
 /*
 |--------------------------------------------------------------------------
-| Página principal
+| Web Routes
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', [SitioController::class, 'inicio'])
-    ->name('inicio');
+
+Route::get('/dashboard', function () {//nombre la ruta como dashboard porque sin ecoturismolostuxtlas.com nos mandaba al dasboard
+    return redirect('/dashboard');
+});
+
+Route::get('/', [SitioController::class, 'inicio'])->name('inicio');//le quité turismocomunitario
+
+
+Route::get('/centro/{nombre}', [SitioController::class, 'centro'])->name('centro.mostrar');
+
 
 /*
 |--------------------------------------------------------------------------
-| Ruta dinámica de centros turísticos
+| Centros turísticos (páginas públicas)
 |--------------------------------------------------------------------------
 */
 
-Route::get('/centro/{id}', [SitioController::class, 'mostrarCentro'])
-    ->name('centro.show');
-
-/*
-|--------------------------------------------------------------------------
-| Register
-|--------------------------------------------------------------------------
-*/
+Route::get('/apompal', [SitioController::class, 'mostrarCentro'])->name('apompal');
+Route::get('/arrecifes', [SitioController::class, 'mostrarCentro'])->name('arrecifes');
+Route::get('/benitojuarez', [SitioController::class, 'mostrarCentro'])->name('benitojuarez');
+Route::get('/cabanasencantadas', [SitioController::class, 'mostrarCentro'])->name('cabanasencantadas');
+Route::get('/cascadasencantadas', [SitioController::class, 'mostrarCentro'])->name('cascadasencantadas');
+Route::get('/ceytaks', [SitioController::class, 'mostrarCentro'])->name('ceytaks');
+Route::get('/elmirador', [SitioController::class, 'mostrarCentro'])->name('elmirador');
+Route::get('/jomxuk', [SitioController::class, 'mostrarCentro'])->name('jomxuk');
+Route::get('/kantasejkan', [SitioController::class, 'mostrarCentro'])->name('kantasejkan');
+Route::get('/lagunadelostion', [SitioController::class, 'mostrarCentro'])->name('lagunadelostion');
+Route::get('/lasmargaritas', [SitioController::class, 'mostrarCentro'])->name('lasmargaritas');
+Route::get('/manglaressontecomapan', [SitioController::class, 'mostrarCentro'])->name('manglaressontecomapan');
+Route::get('/ranchodonaelia', [SitioController::class, 'mostrarCentro'])->name('ranchodonaelia');
+Route::get('/rocapartida', [SitioController::class, 'mostrarCentro'])->name('rocapartida');
+Route::get('/selvaelmarinero', [SitioController::class, 'mostrarCentro'])->name('selvaelmarinero');
 
 Route::get('/register', function () {
     return Inertia::render('Auth/Register');
 })->name('register');
-
 /*
 |--------------------------------------------------------------------------
 | Dashboard
@@ -54,6 +68,7 @@ Route::get('/dashboard', function () {
         'producto' => App\Models\Producto::count(),
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -77,30 +92,38 @@ Route::middleware('auth')->group(function () {
     Route::resource('serviciosturist', App\Http\Controllers\ServiciosturistController::class);
     Route::resource('producto', App\Http\Controllers\ProductoController::class);
 
-    Route::post('updatecentrosturist', [App\Http\Controllers\CentrosturistController::class, 'updatecentrosturist'])
-        ->name('updatecentrosturist');
+    Route::post('updatecentrosturist', [App\Http\Controllers\CentrosturistController::class, 'updatecentrosturist'])->name('updatecentrosturist');
+    Route::post('updateguiasturist', [App\Http\Controllers\GuiasturistController::class, 'updateguiasturist'])->name('updateguiasturist');
 
-    Route::post('updateguiasturist', [App\Http\Controllers\GuiasturistController::class, 'updateguiasturist'])
-        ->name('updateguiasturist');
+    Route::get('/centrosturist/{centrosturist}/pdf', [CentrosturistController::class, 'pdf'])->name('centrosturist.pdf');
 
-    Route::get('/centrosturist/{centrosturist}/pdf', [CentrosturistController::class, 'pdf'])
-        ->name('centrosturist.pdf');
 });
+
 
 /*
 |--------------------------------------------------------------------------
-| Sitemap
-|--------------------------------------------------------------------------
+| Auth routes
+|---------------------
+
+-----------------------------------------------------
 */
 
+
+
+
+//ruta de sitemap
 use Spatie\Sitemap\SitemapGenerator;
 
 Route::get('/generar-sitemap', function () {
-
+    // Esto va a escanear automáticamente toda tu web y creará el archivo en la carpeta public
     SitemapGenerator::create('https://ecoturismolostuxtlas.com')
         ->writeToFile(public_path('sitemap.xml'));
 
-    return '¡Sitemap creado con éxito!';
+    return '¡Sitemap creado con éxito en la carpeta public!';
 });
+
+
+
+
 
 require __DIR__.'/auth.php';
